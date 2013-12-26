@@ -1,6 +1,6 @@
 /**
 config utf8 for Ubuntu 12.04
-sudo vim /etc/
+sudo vim /etc/mysql/my.cnf
 
 [client]加
 default-character-set   = utf8

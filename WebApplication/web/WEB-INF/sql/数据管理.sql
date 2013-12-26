@@ -89,6 +89,9 @@ Material_Doc
 id, material_code,document_grade, status(是否添加资料), Bom,iqc_Standard, iqc_card, Specification, iqc_Agreement, ppap_document
 */
 
+create table t_material_doc(
+
+)
 
 /**
 Material_exception_log

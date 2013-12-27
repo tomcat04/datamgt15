@@ -61,7 +61,7 @@ create table t_user_role(
     userId varchar(32),
     roleId int,
     status smallint,
-    request_time date,
+    request_time date
 );
 
 
@@ -90,17 +90,44 @@ id, material_code,document_grade, status(是否添加资料), Bom,iqc_Standard, 
 */
 
 create table t_material_doc(
-
-)
+    id int primary key,
+    material_code varchar(32),
+    document_grade varchar(32),
+    status smallint,
+    Bom varchar(255),
+    iqc_Standard varchar(255),
+    iqc_card varchar(255),
+    specification varchar(255),
+    iqc_Agreement varchar(255),
+    ppap_document varchar(255)
+);
 
 /**
 Material_exception_log
-id,material_code,log_time,batch,exception, deal_desc, status
+id,material_code,log_time,batch,exception_desc, deal_desc, status
 */
+create table t_material_exception_log(
+id int primary key,
+material_code varchar(32),
+log_time date,
+batch varchar(32),
+exception_desc varchar(255),
+deal_desc  varchar(255),
+status smallint
+);
 
 /**
 Vendor
 id, vendor_code, vendor_name, brand, vendor_grade, phone, mobile_phone, email
 **/
-
+create table t_vendor(
+id int primary key,
+vendor_code varchar(32),
+vendor_name varchar(255),
+brand varchar(64),
+vendor_grade  varchar(32),
+phone varchar(32),
+mobile_phone varchar(32),
+email varchar(64)
+);
 

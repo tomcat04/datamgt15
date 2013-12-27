@@ -11,15 +11,15 @@ package com.byd.datamgt15.domain;
 public class MaterialDoc {
 
     int id;
-    String material_code;
-    String document_grade;
+    String materialCode;
+    String documentGrade;
     String status;
     String BOM;
-    String iqc_Standard;
-    String iqc_card;
+    String iqcStandard;
+    String iqcCard;
     String specification;
-    String iqc_Agreement;
-    String ppap_document;
+    String iqcAgreement;
+    String ppapDocument;
 
     public int getId() {
         return id;
@@ -29,20 +29,20 @@ public class MaterialDoc {
         this.id = id;
     }
 
-    public String getMaterial_code() {
-        return material_code;
+    public String getMaterialCode() {
+        return materialCode;
     }
 
-    public void setMaterial_code(String material_code) {
-        this.material_code = material_code;
+    public void setMaterialCode(String materialCode) {
+        this.materialCode = materialCode;
     }
 
-    public String getDocument_grade() {
-        return document_grade;
+    public String getDocumentGrade() {
+        return documentGrade;
     }
 
-    public void setDocument_grade(String document_grade) {
-        this.document_grade = document_grade;
+    public void setDocumentGrade(String documentGrade) {
+        this.documentGrade = documentGrade;
     }
 
     public String getStatus() {
@@ -61,20 +61,20 @@ public class MaterialDoc {
         this.BOM = BOM;
     }
 
-    public String getIqc_Standard() {
-        return iqc_Standard;
+    public String getIqcStandard() {
+        return iqcStandard;
     }
 
-    public void setIqc_Standard(String iqc_Standard) {
-        this.iqc_Standard = iqc_Standard;
+    public void setIqcStandard(String iqcStandard) {
+        this.iqcStandard = iqcStandard;
     }
 
-    public String getIqc_card() {
-        return iqc_card;
+    public String getIqcCard() {
+        return iqcCard;
     }
 
-    public void setIqc_card(String iqc_card) {
-        this.iqc_card = iqc_card;
+    public void setIqcCard(String iqcCard) {
+        this.iqcCard = iqcCard;
     }
 
     public String getSpecification() {
@@ -85,21 +85,22 @@ public class MaterialDoc {
         this.specification = specification;
     }
 
-    public String getIqc_Agreement() {
-        return iqc_Agreement;
+    public String getIqcAgreement() {
+        return iqcAgreement;
     }
 
-    public void setIqc_Agreement(String iqc_Agreement) {
-        this.iqc_Agreement = iqc_Agreement;
+    public void setIqcAgreement(String iqcAgreement) {
+        this.iqcAgreement = iqcAgreement;
     }
 
-    public String getPpap_document() {
-        return ppap_document;
+    public String getPpapDocument() {
+        return ppapDocument;
     }
 
-    public void setPpap_document(String ppap_document) {
-        this.ppap_document = ppap_document;
+    public void setPpapDocument(String ppapDocument) {
+        this.ppapDocument = ppapDocument;
     }
-    
+
+   
     
 }

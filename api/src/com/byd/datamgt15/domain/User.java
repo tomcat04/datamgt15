@@ -9,18 +9,18 @@ public class User {
 
     int id;
     String region;
-    String user_name;
+    String userName;
     String password;
     String email;
     String gender;
-    String job_title;
+    String jobTitle;
     String phone;
-    String mobile_phone;
+    String mobilePhone;
     String organization;
     /**
      * 办公地点
      */
-    String working_location;
+    String workingLocation;
     /**
      * 车间
      */
@@ -29,7 +29,8 @@ public class User {
     /**
      * 科室
      */
-    String working_section;
+    String workingSection;
+    
     String status;
 
     public int getId() {
@@ -48,12 +49,12 @@ public class User {
         this.region = region;
     }
 
-    public String getUser_name() {
-        return user_name;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUser_name(String user_name) {
-        this.user_name = user_name;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getPassword() {
@@ -80,12 +81,12 @@ public class User {
         this.gender = gender;
     }
 
-    public String getJob_title() {
-        return job_title;
+    public String getJobTitle() {
+        return jobTitle;
     }
 
-    public void setJob_title(String job_title) {
-        this.job_title = job_title;
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
     }
 
     public String getPhone() {
@@ -96,12 +97,12 @@ public class User {
         this.phone = phone;
     }
 
-    public String getMobile_phone() {
-        return mobile_phone;
+    public String getMobilePhone() {
+        return mobilePhone;
     }
 
-    public void setMobile_phone(String mobile_phone) {
-        this.mobile_phone = mobile_phone;
+    public void setMobilePhone(String mobilePhone) {
+        this.mobilePhone = mobilePhone;
     }
 
     public String getOrganization() {
@@ -112,12 +113,12 @@ public class User {
         this.organization = organization;
     }
 
-    public String getWorking_location() {
-        return working_location;
+    public String getWorkingLocation() {
+        return workingLocation;
     }
 
-    public void setWorking_location(String working_location) {
-        this.working_location = working_location;
+    public void setWorkingLocation(String workingLocation) {
+        this.workingLocation = workingLocation;
     }
 
     public String getWorkshop() {
@@ -128,12 +129,12 @@ public class User {
         this.workshop = workshop;
     }
 
-    public String getWorking_section() {
-        return working_section;
+    public String getWorkingSection() {
+        return workingSection;
     }
 
-    public void setWorking_section(String working_section) {
-        this.working_section = working_section;
+    public void setWorkingSection(String workingSection) {
+        this.workingSection = workingSection;
     }
 
     public String getStatus() {
@@ -143,5 +144,7 @@ public class User {
     public void setStatus(String status) {
         this.status = status;
     }
+
+   
 
 }

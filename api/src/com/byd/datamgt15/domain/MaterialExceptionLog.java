@@ -13,11 +13,11 @@ import java.util.Date;
 public class MaterialExceptionLog {
 
     int id;
-    String material_code;
-    Date log_time;
+    String materialCode;
+    Date logTime;
     String batch;
-    String exception_desc;
-    String deal_desc;
+    String exceptionDesc;
+    String dealDesc;
     String status;
 
     public int getId() {
@@ -28,20 +28,20 @@ public class MaterialExceptionLog {
         this.id = id;
     }
 
-    public String getMaterial_code() {
-        return material_code;
+    public String getMaterialCode() {
+        return materialCode;
     }
 
-    public void setMaterial_code(String material_code) {
-        this.material_code = material_code;
+    public void setMaterialCode(String materialCode) {
+        this.materialCode = materialCode;
     }
 
-    public Date getLog_time() {
-        return log_time;
+    public Date getLogTime() {
+        return logTime;
     }
 
-    public void setLog_time(Date log_time) {
-        this.log_time = log_time;
+    public void setLogTime(Date logTime) {
+        this.logTime = logTime;
     }
 
     public String getBatch() {
@@ -52,20 +52,20 @@ public class MaterialExceptionLog {
         this.batch = batch;
     }
 
-    public String getException_desc() {
-        return exception_desc;
+    public String getExceptionDesc() {
+        return exceptionDesc;
     }
 
-    public void setException_desc(String exception_desc) {
-        this.exception_desc = exception_desc;
+    public void setExceptionDesc(String exceptionDesc) {
+        this.exceptionDesc = exceptionDesc;
     }
 
-    public String getDeal_desc() {
-        return deal_desc;
+    public String getDealDesc() {
+        return dealDesc;
     }
 
-    public void setDeal_desc(String deal_desc) {
-        this.deal_desc = deal_desc;
+    public void setDealDesc(String dealDesc) {
+        this.dealDesc = dealDesc;
     }
 
     public String getStatus() {
@@ -76,4 +76,5 @@ public class MaterialExceptionLog {
         this.status = status;
     }
 
+    
 }

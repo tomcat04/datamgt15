@@ -11,9 +11,9 @@ package com.byd.datamgt15.domain;
 public class Material {
 
     int id;
-    String material_code;
-    String material_desc;
-    String material_desc2;
+    String materialCode;
+    String materialDesc;
+    String materialDesc2;
     byte[] image;
     String QMS;
 
@@ -25,28 +25,28 @@ public class Material {
         this.id = id;
     }
 
-    public String getMaterial_code() {
-        return material_code;
+    public String getMaterialCode() {
+        return materialCode;
     }
 
-    public void setMaterial_code(String material_code) {
-        this.material_code = material_code;
+    public void setMaterialCode(String materialCode) {
+        this.materialCode = materialCode;
     }
 
-    public String getMaterial_desc() {
-        return material_desc;
+    public String getMaterialDesc() {
+        return materialDesc;
     }
 
-    public void setMaterial_desc(String material_desc) {
-        this.material_desc = material_desc;
+    public void setMaterialDesc(String materialDesc) {
+        this.materialDesc = materialDesc;
     }
 
-    public String getMaterial_desc2() {
-        return material_desc2;
+    public String getMaterialDesc2() {
+        return materialDesc2;
     }
 
-    public void setMaterial_desc2(String material_desc2) {
-        this.material_desc2 = material_desc2;
+    public void setMaterialDesc2(String materialDesc2) {
+        this.materialDesc2 = materialDesc2;
     }
 
     public byte[] getImage() {
@@ -64,6 +64,8 @@ public class Material {
     public void setQMS(String QMS) {
         this.QMS = QMS;
     }
+
+   
     
     
 }

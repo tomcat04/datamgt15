@@ -11,12 +11,12 @@ package com.byd.datamgt15.domain;
 public class Vendor {
 
     String id;
-    String vendor_code;
-    String vendor_name;
+    String vendorCode;
+    String vendorName;
     String brand;
-    String vendor_grade;
+    String vendorGrade;
     String phone;
-    String mobile_phone;
+    String mobilePhone;
     String email;
 
     public String getId() {
@@ -27,20 +27,20 @@ public class Vendor {
         this.id = id;
     }
 
-    public String getVendor_code() {
-        return vendor_code;
+    public String getVendorCode() {
+        return vendorCode;
     }
 
-    public void setVendor_code(String vendor_code) {
-        this.vendor_code = vendor_code;
+    public void setVendorCode(String vendorCode) {
+        this.vendorCode = vendorCode;
     }
 
-    public String getVendor_name() {
-        return vendor_name;
+    public String getVendorName() {
+        return vendorName;
     }
 
-    public void setVendor_name(String vendor_name) {
-        this.vendor_name = vendor_name;
+    public void setVendorName(String vendorName) {
+        this.vendorName = vendorName;
     }
 
     public String getBrand() {
@@ -51,12 +51,12 @@ public class Vendor {
         this.brand = brand;
     }
 
-    public String getVendor_grade() {
-        return vendor_grade;
+    public String getVendorGrade() {
+        return vendorGrade;
     }
 
-    public void setVendor_grade(String vendor_grade) {
-        this.vendor_grade = vendor_grade;
+    public void setVendorGrade(String vendorGrade) {
+        this.vendorGrade = vendorGrade;
     }
 
     public String getPhone() {
@@ -67,12 +67,12 @@ public class Vendor {
         this.phone = phone;
     }
 
-    public String getMobile_phone() {
-        return mobile_phone;
+    public String getMobilePhone() {
+        return mobilePhone;
     }
 
-    public void setMobile_phone(String mobile_phone) {
-        this.mobile_phone = mobile_phone;
+    public void setMobilePhone(String mobilePhone) {
+        this.mobilePhone = mobilePhone;
     }
 
     public String getEmail() {
@@ -82,6 +82,7 @@ public class Vendor {
     public void setEmail(String email) {
         this.email = email;
     }
-    
+
+  
     
 }

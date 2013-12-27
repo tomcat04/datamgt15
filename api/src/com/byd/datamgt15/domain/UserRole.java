@@ -16,7 +16,7 @@ public class UserRole {
     int userId;
     int roleId;
     String status;
-    Date request_time;
+    Date requestTime;
 
     public int getId() {
         return id;
@@ -50,13 +50,12 @@ public class UserRole {
         this.status = status;
     }
 
-    public Date getRequest_time() {
-        return request_time;
+    public Date getRequestTime() {
+        return requestTime;
     }
 
-    public void setRequest_time(Date request_time) {
-        this.request_time = request_time;
+    public void setRequestTime(Date requestTime) {
+        this.requestTime = requestTime;
     }
-    
-    
+
 }

@@ -72,14 +72,13 @@ Role
 
 /**
 Material
- id, material_code, material_desc, material_desc2, image, QMS质量管理体系
+ id, material_code, material_desc, image, QMS质量管理体系
 */
 
 create table t_material(
     id int primary key,
     material_code varchar(32),
     material_desc varchar(255),
-    material_desc2 varchar(255),
     image blob,
     QMS varchar(255)
 );
@@ -131,3 +130,11 @@ mobile_phone varchar(32),
 email varchar(64)
 );
 
+
+/**
+Material_Vendor_Relation
+    id,recordId(编号),materialCode,vendorCode,material_desc2(原厂描述),delivery_cycle(交货周期),delivery_status(供货状态)
+**/
+create table t_material_vendor_relation(
+    
+);

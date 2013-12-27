@@ -13,7 +13,7 @@ public class Material {
     int id;
     String materialCode;
     String materialDesc;
-    String materialDesc2;
+
     byte[] image;
     String QMS;
 
@@ -39,14 +39,6 @@ public class Material {
 
     public void setMaterialDesc(String materialDesc) {
         this.materialDesc = materialDesc;
-    }
-
-    public String getMaterialDesc2() {
-        return materialDesc2;
-    }
-
-    public void setMaterialDesc2(String materialDesc2) {
-        this.materialDesc2 = materialDesc2;
     }
 
     public byte[] getImage() {

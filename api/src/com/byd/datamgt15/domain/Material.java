@@ -10,20 +10,20 @@ package com.byd.datamgt15.domain;
  */
 public class Material {
 
-    int id;
+//    int id;
     String materialCode;
     String materialDesc;
 
     byte[] image;
     String QMS;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+//    public int getId() {
+//        return id;
+//    }
+//
+//    public void setId(int id) {
+//        this.id = id;
+//    }
 
     public String getMaterialCode() {
         return materialCode;

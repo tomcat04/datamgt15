@@ -30,7 +30,9 @@ public class MaterialFullInfo {
     String phone;
     String mobilePhone;
     String email;
-
+    String deliveryCycle;
+    String deliveryStatus;
+    
     public int getId() {
         return id;
     }
@@ -141,6 +143,22 @@ public class MaterialFullInfo {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getDeliveryCycle() {
+        return deliveryCycle;
+    }
+
+    public void setDeliveryCycle(String deliveryCycle) {
+        this.deliveryCycle = deliveryCycle;
+    }
+
+    public String getDeliveryStatus() {
+        return deliveryStatus;
+    }
+
+    public void setDeliveryStatus(String deliveryStatus) {
+        this.deliveryStatus = deliveryStatus;
     }
     
     

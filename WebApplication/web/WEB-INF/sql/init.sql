@@ -136,5 +136,13 @@ Material_Vendor_Relation
     id,recordId(编号),materialCode,vendorCode,material_desc2(原厂描述),delivery_cycle(交货周期),delivery_status(供货状态)
 **/
 create table t_material_vendor_relation(
-    
+id int primary key,
+recordId varchar(32),
+material_Code varchar(32),
+vendor_Code varchar(32),
+material_desc2 varchar(255),
+delivery_cycle varchar(32),
+delivery_status smallint
 );
+
+

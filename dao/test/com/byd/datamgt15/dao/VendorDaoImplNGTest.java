@@ -6,6 +6,7 @@
 package com.byd.datamgt15.dao;
 
 import com.byd.datamgt15.domain.Vendor;
+import java.util.Collection;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import static org.testng.Assert.*;
@@ -52,6 +53,40 @@ public class VendorDaoImplNGTest {
         
         vendorDao.insert(vendor);
         
+    }
+
+    @Test(enabled = false)
+    public void testMerge() {
+        System.out.println("merge");
+        Vendor bean = null;
+       
+        vendorDao.merge(bean);
+        fail("The test case is a prototype.");
+    }
+
+    @Test(enabled = false)
+    public void testMergeAll() {
+        System.out.println("mergeAll");
+        Collection<Vendor> beans = null;
+        VendorDaoImpl instance = new VendorDaoImpl();
+        instance.mergeAll(beans);
+        fail("The test case is a prototype.");
+    }
+
+    @Test()
+    public void testSelect() {
+        System.out.println("select");
+        Vendor bean = new Vendor();
+        bean.setVendorCode("testVendor");
+        Vendor result = vendorDao.select(bean);
+        assertNotNull(result);
+        assertEquals(result.getVendorCode(), "testVendor");
+    }
+
+    @Test
+    public void testDelete() {
+        System.out.println("delete");
+        vendorDao.delete(1);
     }
     
 }

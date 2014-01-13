@@ -30,7 +30,7 @@ public interface IBaseDao<T> {
     
     public void mergeAll(Collection<T> beans);
     
-    public void delete(String id);
+    public void delete(Integer id);
     
      /**
      * 根据唯一约束删除数据

@@ -5,6 +5,7 @@
         <id name="id" column="id" type="integer">
             <generator class="increment"/>
         </id>
+        <property name="vendorCode" column="VENDOR_CODE" type="java.lang.String"  /> 
         <property name="vendorName" column="VENDOR_NAME" type="java.lang.String"  /> 
     </class>
 </hibernate-mapping>

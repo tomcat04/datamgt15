@@ -68,6 +68,7 @@ public abstract class BaseDaoHibernateImpl<T> implements IBaseDao<T> {
                 new HibernateCallback<Long>() {
                     @Override
                     public Long doInHibernate(Session session) throws HibernateException, SQLException {
+                        //TODO Criteria抽取，不依赖Hibernate
                         DetachedCriteria detachedCriteria = null;
                         org.hibernate.Criteria criteria = detachedCriteria.getExecutableCriteria(session);
                         return (Long) criteria.setProjection(Projections.rowCount()).uniqueResult();

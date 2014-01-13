@@ -121,7 +121,7 @@ id, vendor_code, vendor_name, brand, vendor_grade, phone, mobile_phone, email
 **/
 create table t_vendor(
 -- id int primary key,
-vendor_code varchar(32),
+vendor_code varchar(32) primary key,
 vendor_name varchar(255),
 brand varchar(64),
 vendor_grade  varchar(32),

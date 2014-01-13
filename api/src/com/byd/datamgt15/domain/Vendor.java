@@ -10,7 +10,7 @@ package com.byd.datamgt15.domain;
  */
 public class Vendor {
 
-//    String id;
+    Integer id;
     String vendorCode;
     String vendorName;
     String brand;
@@ -19,13 +19,13 @@ public class Vendor {
     String mobilePhone;
     String email;
 
-//    public String getId() {
-//        return id;
-//    }
-//
-//    public void setId(String id) {
-//        this.id = id;
-//    }
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getVendorCode() {
         return vendorCode;

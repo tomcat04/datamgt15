@@ -76,7 +76,7 @@ Material
 */
 
 create table t_material(
---     id int primary key,
+    id int primary key,
     material_code varchar(32),
     material_desc varchar(255),
     image blob,
@@ -89,7 +89,7 @@ id, material_code,document_grade, status(是否添加资料), Bom,iqc_Standard, 
 */
 
 create table t_material_doc(
---     id int primary key,
+    id int primary key,
     material_code varchar(32),
     document_grade varchar(32),
     status smallint,
@@ -120,7 +120,7 @@ Vendor
 id, vendor_code, vendor_name, brand, vendor_grade, phone, mobile_phone, email
 **/
 create table t_vendor(
--- id int primary key,
+id int primary key,
 vendor_code varchar(32) primary key,
 vendor_name varchar(255),
 brand varchar(64),

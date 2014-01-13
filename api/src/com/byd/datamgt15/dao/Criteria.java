@@ -5,12 +5,10 @@
 
 package com.byd.datamgt15.dao;
 
-import com.byd.datamgt15.domain.Vendor;
-
 /**
  *
  * @author ty
  */
-public interface IVendorDao extends IBaseDao <Vendor>{
-
+public class Criteria {
+    
 }

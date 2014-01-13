@@ -50,7 +50,7 @@ public class VendorDaoImplNGTest {
         vendor.setVendorCode("testVendor");
         vendor.setVendorName("test供应商名称");
         
-        vendorDao.add(vendor);
+        vendorDao.insert(vendor);
         
     }
     

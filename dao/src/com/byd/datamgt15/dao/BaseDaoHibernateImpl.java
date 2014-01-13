@@ -12,7 +12,7 @@ import org.springframework.orm.hibernate3.HibernateTemplate;
  *
  * @author ty
  */
-public class BaseDaoHibernateImpl implements IBaseDao{
+public class BaseDaoHibernateImpl{
     @Autowired
     protected HibernateTemplate dao ;
 }

@@ -7,6 +7,7 @@ package com.byd.datamgt15.dao;
 import java.sql.SQLException;
 import java.util.Collection;
 import java.util.List;
+import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.criterion.DetachedCriteria;
@@ -53,24 +54,22 @@ public abstract class BaseDaoHibernateImpl<T> implements IBaseDao<T> {
     public abstract T select(T bean);
 
     @Override
-    public List<T> selectList(Criteria criteria) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public List<T> selectList(DetachedCriteria criteria) {
+        return dao.findByCriteria(criteria);
     }
 
     @Override
-    public List<T> selectListByPage(Criteria criteria, Integer startNum, Integer endNum) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public List<T> selectListByPage(DetachedCriteria criteria, Integer startNum, Integer endNum) {
+        return dao.findByCriteria(criteria, startNum, endNum - startNum + 1);
     }
 
     @Override
-    public Integer count(Criteria criteria) {
+    public Integer count(final DetachedCriteria detachedCriteria) {
         Long count = dao.execute(
                 new HibernateCallback<Long>() {
                     @Override
                     public Long doInHibernate(Session session) throws HibernateException, SQLException {
-                        //TODO Criteria抽取，不依赖Hibernate
-                        DetachedCriteria detachedCriteria = null;
-                        org.hibernate.Criteria criteria = detachedCriteria.getExecutableCriteria(session);
+                        Criteria criteria = detachedCriteria.getExecutableCriteria(session);
                         return (Long) criteria.setProjection(Projections.rowCount()).uniqueResult();
                     }
                 }

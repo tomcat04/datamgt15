@@ -16,28 +16,39 @@ public class VendorDaoImpl extends BaseDaoHibernateImpl<Vendor> implements IVend
 
     @Override
     public void merge(Vendor bean) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (bean.getVendorCode() == null) {
+            throw new RuntimeException("参数不正确");
+        } else {
+            Vendor existVendor = this.select(bean);
+            if (existVendor == null) {
+                this.insert(bean);
+            } else {
+                dao.update(existVendor);
+            }
+        }
     }
 
     @Override
     public void mergeAll(Collection<Vendor> beans) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        for (Vendor vendorBean : beans) {
+            this.merge(vendorBean);
+        }
     }
 
     @Override
     public Vendor select(Vendor bean) {
-        if(bean.getId()!=null){
+        if (bean.getId() != null) {
             return dao.get(Vendor.class, bean.getId());
-        }else if(bean.getVendorCode()!=null){
+        } else if (bean.getVendorCode() != null) {
             DetachedCriteria detachedCriteria = DetachedCriteria.forClass(Vendor.class);
             detachedCriteria.add(Restrictions.eq("vendorCode", bean.getVendorCode()));
             List findByCriteria = dao.findByCriteria(detachedCriteria);
-            if(findByCriteria!=null &&!findByCriteria.isEmpty()){
+            if (findByCriteria != null && !findByCriteria.isEmpty()) {
                 return (Vendor) findByCriteria.get(0);
-            }else{
+            } else {
                 return null;
             }
-        }else{
+        } else {
             throw new RuntimeException("参数不正确");
         }
     }

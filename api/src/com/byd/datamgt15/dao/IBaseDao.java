@@ -7,9 +7,10 @@ package com.byd.datamgt15.dao;
 
 import java.util.Collection;
 import java.util.List;
+import org.hibernate.criterion.DetachedCriteria;
 
 /**
- *
+ * TODO Criteria抽取，不依赖Hibernate
  * @author ty
  * @param <T>
  */
@@ -42,11 +43,12 @@ public interface IBaseDao<T> {
     
     public T select(T bean);
     
-    public List<T> selectList(Criteria criteria);
     
-    public List<T> selectListByPage(Criteria criteria, Integer startNum, Integer endNum);
+    public List<T> selectList(DetachedCriteria detachedCriteria);
     
-    public Integer count(Criteria criteria);
+    public List<T> selectListByPage(DetachedCriteria detachedCriteria, Integer startNum, Integer endNum);
+    
+    public Integer count(DetachedCriteria detachedCriteria);
     
     
 }

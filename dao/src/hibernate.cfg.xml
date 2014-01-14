@@ -9,5 +9,6 @@
     <property name="hibernate.connection.password">bydrootnew</property>
     <mapping resource="com/byd/datamgt15/dao/mapping/vendor.hbm.xml"/>
     <mapping resource="com/byd/datamgt15/dao/mapping/hibernate.hbm.xml"/>
+    <mapping resource="com/byd/datamgt15/dao/mapping/materialExceptionLog.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

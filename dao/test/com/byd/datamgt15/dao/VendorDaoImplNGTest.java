@@ -2,11 +2,13 @@
  * Here comes the text of your license
  * Each line should be prefixed with  * 
  */
-
 package com.byd.datamgt15.dao;
 
 import com.byd.datamgt15.domain.Vendor;
+import java.util.Calendar;
 import java.util.Collection;
+import org.hibernate.criterion.DetachedCriteria;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import static org.testng.Assert.*;
@@ -21,8 +23,10 @@ import org.testng.annotations.Test;
  * @author ty
  */
 public class VendorDaoImplNGTest {
+
     IVendorDao vendorDao = null;
-    
+    private final Long tag = Calendar.getInstance().getTimeInMillis();
+
     public VendorDaoImplNGTest() {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("hibernate_SpringXMLConfig.xml");
         vendorDao = applicationContext.getBean(IVendorDao.class);
@@ -45,42 +49,52 @@ public class VendorDaoImplNGTest {
     }
 
     @Test
-    public void testAdd() {
+    public void testInsert() {
         System.out.println("add");
         Vendor vendor = new Vendor();
-        vendor.setVendorCode("testVendor");
+        vendor.setVendorCode("testVendor" + tag);
         vendor.setVendorName("test供应商名称");
-        
+
         vendorDao.insert(vendor);
-        
+
     }
 
-    @Test(enabled = false)
+    @Test()
     public void testMerge() {
         System.out.println("merge");
-        Vendor bean = null;
-       
-        vendorDao.merge(bean);
-        fail("The test case is a prototype.");
-    }
 
-    @Test(enabled = false)
-    public void testMergeAll() {
-        System.out.println("mergeAll");
-        Collection<Vendor> beans = null;
-        VendorDaoImpl instance = new VendorDaoImpl();
-        instance.mergeAll(beans);
-        fail("The test case is a prototype.");
+        //test update
+        Vendor vendor = new Vendor();
+        vendor.setVendorCode("testVendor" + tag);
+        vendor.setEmail("test@byd.com");
+        vendorDao.merge(vendor);
+
+        //test insert 
+        Vendor vendor2 = new Vendor();
+        vendor2.setVendorCode("testVendor" + (tag-1));
+        vendor2.setEmail("test-1@byd.com");
+        vendorDao.merge(vendor2);
+
     }
 
     @Test()
     public void testSelect() {
         System.out.println("select");
-        Vendor bean = new Vendor();
-        bean.setVendorCode("testVendor");
-        Vendor result = vendorDao.select(bean);
+        Vendor param = new Vendor();
+        param.setVendorCode("testVendor" + tag);
+        Vendor result = vendorDao.select(param);
         assertNotNull(result);
-        assertEquals(result.getVendorCode(), "testVendor");
+        assertEquals(result.getVendorCode(), "testVendor" + tag);
+    }
+
+    @Test
+    public void testCount() {
+        System.out.println("count vendor");
+        DetachedCriteria detachedCriteria = DetachedCriteria.forClass(Vendor.class);
+        detachedCriteria.add(Restrictions.eq("vendorCode", "testVendor"+tag));
+        Integer count = vendorDao.count(detachedCriteria);
+        assertTrue(count >= 0);
+
     }
 
     @Test
@@ -88,5 +102,5 @@ public class VendorDaoImplNGTest {
         System.out.println("delete");
         vendorDao.delete(1);
     }
-    
+
 }

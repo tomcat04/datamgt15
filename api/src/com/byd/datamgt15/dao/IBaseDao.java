@@ -18,6 +18,7 @@ public interface IBaseDao<T> {
     
     public void insert(T bean);
     
+    @Deprecated
     public void insertAll(Collection<T> beans);
     
     /**

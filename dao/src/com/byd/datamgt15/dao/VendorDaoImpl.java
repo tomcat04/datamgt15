@@ -28,12 +28,7 @@ public class VendorDaoImpl extends BaseDaoHibernateImpl<Vendor> implements IVend
         }
     }
 
-    @Override
-    public void mergeAll(Collection<Vendor> beans) {
-        for (Vendor vendorBean : beans) {
-            this.merge(vendorBean);
-        }
-    }
+   
 
     @Override
     public Vendor select(Vendor bean) {

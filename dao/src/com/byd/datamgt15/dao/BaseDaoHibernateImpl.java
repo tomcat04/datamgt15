@@ -40,7 +40,11 @@ public abstract class BaseDaoHibernateImpl<T> implements IBaseDao<T> {
     public abstract void merge(T bean);
 
     @Override
-    public abstract void mergeAll(Collection<T> beans);
+    public void mergeAll(Collection<T> beans) {
+        for (T bean : beans) {
+            this.merge(bean);
+        }
+    }
 
     @Override
     public abstract void delete(Integer id);

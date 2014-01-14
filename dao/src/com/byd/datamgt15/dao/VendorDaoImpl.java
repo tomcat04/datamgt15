@@ -1,7 +1,6 @@
 package com.byd.datamgt15.dao;
 
 import com.byd.datamgt15.domain.Vendor;
-import java.util.Collection;
 import java.util.List;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Restrictions;

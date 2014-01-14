@@ -12,7 +12,7 @@ import java.util.Date;
  */
 public class MaterialExceptionLog {
 
-    int id;
+    Integer id;
     String materialCode;
     Date logTime;
     String batch;
@@ -20,11 +20,11 @@ public class MaterialExceptionLog {
     String dealDesc;
     String status;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

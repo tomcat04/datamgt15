@@ -5,7 +5,7 @@
 package com.byd.datamgt15.domain;
 
 /**
- *
+ * 物料文档，字段存储文件名
  * @author ty
  */
 public class MaterialDoc {

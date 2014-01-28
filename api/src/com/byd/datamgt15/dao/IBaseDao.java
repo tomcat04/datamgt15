@@ -39,6 +39,11 @@ public interface IBaseDao<T> {
      */
     public void delete(T bean);
     
+    /**
+     * 根据ID或者唯一约束查询
+     * @param bean
+     * @return 
+     */
     public T select(T bean);
     
     

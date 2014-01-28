@@ -7,7 +7,7 @@ package com.byd.datamgt15.domain;
  */
 public class User {
 
-    int id;
+    Integer id;
     String region;
     String userName;
     String password;
@@ -33,11 +33,11 @@ public class User {
     
     String status;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

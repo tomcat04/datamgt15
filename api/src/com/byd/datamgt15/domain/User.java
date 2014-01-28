@@ -9,7 +9,7 @@ public class User {
 
     Integer id;
     String region;
-    String userName;
+    String userName; //should be unique
     String password;
     String email;
     String gender;

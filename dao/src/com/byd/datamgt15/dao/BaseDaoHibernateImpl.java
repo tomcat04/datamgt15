@@ -44,7 +44,7 @@ public abstract class BaseDaoHibernateImpl<T> implements IBaseDao<T> {
 
     @Override
     public abstract void delete(Integer id);
-
+        
     @Override
     public void delete(T bean) {
         dao.delete(bean);

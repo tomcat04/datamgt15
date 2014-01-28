@@ -6,6 +6,8 @@ package com.byd.datamgt15.dao;
 
 import com.byd.datamgt15.domain.Vendor;
 import java.util.Calendar;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.BeansException;
@@ -32,7 +34,7 @@ public class VendorDaoImplNGTest {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("hibernate_SpringXMLConfig.xml");
         vendorDao = applicationContext.getBean(IVendorDao.class);
         }catch(BeansException ex){
-            
+            Logger.getLogger(this.getClass().getName()).log(Level.SEVERE,"初始化", ex);
         }
     }
 

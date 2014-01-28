@@ -10,7 +10,7 @@ package com.byd.datamgt15.domain;
  */
 public class MaterialDoc {
 
-    int id;
+    Integer id;
     String materialCode;
     String documentGrade;
     String status;
@@ -21,11 +21,11 @@ public class MaterialDoc {
     String iqcAgreement;
     String ppapDocument;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

@@ -11,7 +11,7 @@ package com.byd.datamgt15.domain;
  */
 public class MaterialVendorRelation {
     
-    int id ;
+    Integer id ;
     /**
      * 编号
      */
@@ -35,17 +35,16 @@ public class MaterialVendorRelation {
      * 供货状态
      */
     String deliveryStatus;
-    
-    
-    public int getId() {
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
     
-
+    
     public String getRecordId() {
         return recordId;
     }

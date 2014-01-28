@@ -12,33 +12,33 @@ import java.util.Date;
  */
 public class UserRole {
 
-    int id;
-    int userId;
-    int roleId;
+    Integer id;
+    Integer userId;
+    Integer roleId;
     String status;
     Date requestTime;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public int getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
-    public int getRoleId() {
+    public Integer getRoleId() {
         return roleId;
     }
 
-    public void setRoleId(int roleId) {
+    public void setRoleId(Integer roleId) {
         this.roleId = roleId;
     }
 
@@ -57,5 +57,7 @@ public class UserRole {
     public void setRequestTime(Date requestTime) {
         this.requestTime = requestTime;
     }
+
+  
 
 }

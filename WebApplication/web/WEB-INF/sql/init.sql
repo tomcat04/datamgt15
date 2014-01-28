@@ -47,7 +47,7 @@ create  table t_user(
     working_location varchar(255),
     workshop varchar(255),
     working_section varchar(255),
-    status smallInt
+    status int
 );
 
 
@@ -60,7 +60,7 @@ create table t_user_role(
     id int primary key,
     userId varchar(32),
     roleId int,
-    status smallint,
+    status int,
     request_time date
 );
 
@@ -92,7 +92,7 @@ create table t_material_doc(
     id int primary key,
     material_code varchar(32),
     document_grade varchar(32),
-    status smallint,
+    status int,
     Bom varchar(255),
     iqc_Standard varchar(255),
     iqc_card varchar(255),
@@ -112,7 +112,7 @@ log_time date,
 batch varchar(32),
 exception_desc varchar(255),
 deal_desc  varchar(255),
-status smallint
+status int
 );
 
 /**
@@ -142,7 +142,7 @@ material_Code varchar(32),
 vendor_Code varchar(32),
 material_desc2 varchar(255),
 delivery_cycle varchar(32),
-delivery_status smallint
+delivery_status int
 );
 
 /**

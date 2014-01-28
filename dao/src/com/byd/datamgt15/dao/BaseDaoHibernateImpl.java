@@ -31,10 +31,6 @@ public abstract class BaseDaoHibernateImpl<T> implements IBaseDao<T> {
         dao.save(bean);
     }
 
-    @Override
-    public void insertAll(Collection<T> beans) {
-        dao.saveOrUpdateAll(beans);
-    }
 
     @Override
     public abstract void merge(T bean);

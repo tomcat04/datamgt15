@@ -19,6 +19,14 @@ public interface IMaterialExceptionLogDao extends IBaseDao<MaterialExceptionLog>
      */
     @Override
     public void merge(MaterialExceptionLog bean);
+
+    /**
+     * 使用ID进行查询
+     * @param bean
+     * @return 
+     */
+    @Override
+    public MaterialExceptionLog select(MaterialExceptionLog bean);
     
     
     

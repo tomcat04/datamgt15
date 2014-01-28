@@ -6,9 +6,9 @@ package com.byd.datamgt15.dao;
 
 import com.byd.datamgt15.domain.Vendor;
 import java.util.Calendar;
-import java.util.Collection;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Restrictions;
+import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import static org.testng.Assert.*;
@@ -28,8 +28,12 @@ public class VendorDaoImplNGTest {
     private final Long tag = Calendar.getInstance().getTimeInMillis();
 
     public VendorDaoImplNGTest() {
+        try{
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("hibernate_SpringXMLConfig.xml");
         vendorDao = applicationContext.getBean(IVendorDao.class);
+        }catch(BeansException ex){
+            
+        }
     }
 
     @BeforeClass

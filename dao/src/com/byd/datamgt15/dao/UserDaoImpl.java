@@ -19,7 +19,7 @@ public class UserDaoImpl extends BaseDaoHibernateImpl<User> implements IUserDao 
 
     @Override
     public void merge(User bean) {
-        if (bean.getUserName()== null) {
+        if (bean.getUserId()== null) {
             throw new RuntimeException("参数不正确");
         } else {
             User existVendor = this.select(bean);
@@ -36,9 +36,9 @@ public class UserDaoImpl extends BaseDaoHibernateImpl<User> implements IUserDao 
     public User select(User bean) {
         if (bean.getId() != null) {
             return dao.get(User.class, bean.getId());
-        } else if (bean.getUserName() != null) {
+        } else if (bean.getUserId()!= null) {
             DetachedCriteria detachedCriteria = DetachedCriteria.forClass(User.class);
-            detachedCriteria.add(Restrictions.eq("userName", bean.getUserName())); //TODO 用户名还是用户ID
+            detachedCriteria.add(Restrictions.eq("userId", bean.getUserId())); //TODO 用户名还是用户ID
             List findByCriteria = dao.findByCriteria(detachedCriteria);
             if (findByCriteria != null && !findByCriteria.isEmpty()) {
                 return (User) findByCriteria.get(0);

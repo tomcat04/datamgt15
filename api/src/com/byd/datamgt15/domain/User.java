@@ -9,6 +9,7 @@ public class User {
 
     Integer id;
     String region;
+    String userId;
     String userName; //should be unique
     String password;
     String email;
@@ -49,6 +50,14 @@ public class User {
         this.region = region;
     }
 
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+    
     public String getUserName() {
         return userName;
     }

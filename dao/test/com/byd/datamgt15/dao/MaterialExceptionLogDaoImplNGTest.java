@@ -33,7 +33,7 @@ public class MaterialExceptionLogDaoImplNGTest {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("hibernate_SpringXMLConfig.xml");
         materialExceptionLogDao = applicationContext.getBean(IMaterialExceptionLogDao.class);
         }catch(BeansException ex){
-            Logger.getLogger(this.getClass().getName()).log(Level.SEVERE,"初始化", ex);
+            Logger.getLogger(this.getClass().getName()).log(Level.SEVERE,"初始化Spring失败", ex);
         }
     }
 

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.byd.datamgt15.domain.MaterialDoc" table="t_material_doc">
+        <id name="id" column="id" type="integer">
+            <generator class="increment"/>
+        </id>
+        <property name="materialCode" column="MATERIAL_CODE" type="string"  />
+        <property name="documentGrade" column="DOCUMENT_GRADE" type="string"  />
+        <property name="status" column="STATUS" type="string"  />
+        <property name="BOM" column="BOM" type="string"  />
+        <property name="iqcStandard" column="IQC_STANDARD" type="string"  />
+        <property name="iqcCard" column="IQC_CARD" type="string"  />
+        <property name="specification" column="SPECIFICATION" type="string"  />
+        <property name="iqcAgreement" column="IQC_AGREEMENT" type="string"  />    
+        <property name="ppapDocument" column="PPAP_DOCUMENT" type="string"  />
+    </class>
+</hibernate-mapping>

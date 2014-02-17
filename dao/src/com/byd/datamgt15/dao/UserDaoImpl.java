@@ -8,11 +8,13 @@ import com.byd.datamgt15.domain.User;
 import java.util.List;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Restrictions;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author ty
  */
+@Repository
 public class UserDaoImpl extends BaseDaoHibernateImpl<User> implements IUserDao {
 
     @Override

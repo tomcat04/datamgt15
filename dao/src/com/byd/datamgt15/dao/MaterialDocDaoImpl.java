@@ -9,11 +9,13 @@ import com.byd.datamgt15.domain.MaterialDoc;
 import java.util.List;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Restrictions;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author ty
  */
+@Repository
 public class MaterialDocDaoImpl extends BaseDaoHibernateImpl<MaterialDoc> implements IMaterialDocDao{
 
     @Override

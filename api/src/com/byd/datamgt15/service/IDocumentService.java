@@ -2,6 +2,7 @@
 package com.byd.datamgt15.service;
 
 import java.io.File;
+import java.io.InputStream;
 import java.util.List;
 
 /**
@@ -24,4 +25,12 @@ public interface IDocumentService {
      * @return 
      */
     public List<String> getDocumentList(String materialCode);
+    
+    /**
+     * 将文件存储到服务器中
+     * @param fileName
+     * @param materialCode 
+     * @param fileInputStream 
+     */
+    public void saveFile(String fileName,String materialCode,InputStream fileInputStream);
 }

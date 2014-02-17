@@ -19,7 +19,16 @@ public class UserRoleDaoImpl extends BaseDaoHibernateImpl<UserRole> implements I
 
     @Override
     public void merge(UserRole bean) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+          if (bean.getUserId() == null || bean.getRoleId() == null) {
+            throw new RuntimeException("参数不正确");
+        } else {
+            UserRole existVendor = this.select(bean);
+            if (existVendor == null) {
+                this.insert(bean);
+            } else {
+                dao.update(existVendor);
+            }
+        }
     }
 
 

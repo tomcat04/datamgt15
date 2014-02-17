@@ -58,9 +58,9 @@ id, userId, roleId, status, request_time
 
 create table t_user_role(
     id int primary key,
-    userId varchar(32),
-    roleId int,
-    status int,
+    user_Id varchar(32),
+    role_Id int,
+    status varchar(32),
     request_time date
 );
 

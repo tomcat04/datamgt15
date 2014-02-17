@@ -20,7 +20,7 @@ public class MaterialDocDaoImpl extends BaseDaoHibernateImpl<MaterialDoc> implem
 
     @Override
     public void merge(MaterialDoc bean) {
-  if (bean.getMaterialCode() == null) {
+        if (bean.getMaterialCode() == null) {
             throw new RuntimeException("参数不正确");
         } else {
             MaterialDoc existVendor = this.select(bean);
@@ -29,7 +29,8 @@ public class MaterialDocDaoImpl extends BaseDaoHibernateImpl<MaterialDoc> implem
             } else {
                 dao.update(existVendor);
             }
-        }    }
+        }
+    }
 
 
     @Override

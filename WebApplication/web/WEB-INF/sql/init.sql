@@ -35,7 +35,7 @@ drop table t_user;
 create  table t_user(
     id int primary key,
     region varchar(32),
-    userid varchar(32),
+    user_id varchar(32),
     user_name varchar(32),
     password varchar(255),
     email varchar(64),
@@ -47,7 +47,7 @@ create  table t_user(
     working_location varchar(255),
     workshop varchar(255),
     working_section varchar(255),
-    status int
+    status varchar(32)
 );
 
 

@@ -20,13 +20,6 @@ public class MaterialExceptionLogDaoImpl extends BaseDaoHibernateImpl<MaterialEx
         dao.merge(bean);
     }
 
-    @Override
-    public void delete(Integer id) {
-        MaterialExceptionLog vendor = dao.get(MaterialExceptionLog.class, id);
-        if (vendor != null) {
-            dao.delete(vendor);
-        }
-    }
 
     @Override
     public MaterialExceptionLog select(MaterialExceptionLog bean) {

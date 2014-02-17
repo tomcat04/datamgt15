@@ -31,12 +31,6 @@ public class MaterialDocDaoImpl extends BaseDaoHibernateImpl<MaterialDoc> implem
             }
         }    }
 
-    @Override
-    public void delete(Integer id) {
-    MaterialDoc vendor = dao.get(MaterialDoc.class, id);
-        if (vendor != null) {
-            dao.delete(vendor);
-        }    }
 
     @Override
     public MaterialDoc select(MaterialDoc bean) {

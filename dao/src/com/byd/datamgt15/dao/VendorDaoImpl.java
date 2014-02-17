@@ -47,11 +47,4 @@ public class VendorDaoImpl extends BaseDaoHibernateImpl<Vendor> implements IVend
         }
     }
 
-    @Override
-    public void delete(Integer id) {
-        Vendor vendor = dao.get(Vendor.class, id);
-        if (vendor != null) {
-            dao.delete(vendor);
-        }
-    }
 }

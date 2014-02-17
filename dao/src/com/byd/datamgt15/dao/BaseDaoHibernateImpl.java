@@ -4,6 +4,8 @@
  */
 package com.byd.datamgt15.dao;
 
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
 import java.sql.SQLException;
 import java.util.Collection;
 import java.util.List;
@@ -26,12 +28,23 @@ public abstract class BaseDaoHibernateImpl<T> implements IBaseDao<T> {
     @Autowired
     protected HibernateTemplate dao;
 
+    /**
+     * 子类中T所对应的类型
+     */
+    private final Class entityClass;
+
+    public BaseDaoHibernateImpl() {
+        Type genType = getClass().getGenericSuperclass();
+        Type[] params = ((ParameterizedType) genType).getActualTypeArguments();
+        entityClass = (Class) params[0];
+    }
+
     @Override
     public void insert(T bean) {
         dao.save(bean);
     }
 
-
+    
     @Override
     public abstract void merge(T bean);
 
@@ -43,8 +56,13 @@ public abstract class BaseDaoHibernateImpl<T> implements IBaseDao<T> {
     }
 
     @Override
-    public abstract void delete(Integer id);
-        
+    public  void delete(Integer id){
+        T bean = (T) dao.get(entityClass, id);
+        if(bean !=null){
+            dao.delete(bean);
+        }
+    }
+
     @Override
     public void delete(T bean) {
         dao.delete(bean);

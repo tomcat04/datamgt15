@@ -22,13 +22,6 @@ public class UserRoleDaoImpl extends BaseDaoHibernateImpl<UserRole> implements I
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public void delete(Integer id) {
-        UserRole vendor = dao.get(UserRole.class, id);
-        if (vendor != null) {
-            dao.delete(vendor);
-        }
-    }
 
     @Override
     public UserRole select(UserRole bean) {

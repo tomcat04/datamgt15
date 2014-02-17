@@ -31,13 +31,6 @@ public class MaterialDaoImpl extends BaseDaoHibernateImpl<Material> implements I
         }
     }
 
-    @Override
-    public void delete(Integer id) {
-        Material vendor = dao.get(Material.class, id);
-        if (vendor != null) {
-            dao.delete(vendor);
-        }
-    }
 
     @Override
     public Material select(Material bean) {

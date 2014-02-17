@@ -31,13 +31,6 @@ public class UserDaoImpl extends BaseDaoHibernateImpl<User> implements IUserDao 
         }
     }
 
-    @Override
-    public void delete(Integer id) {
-        User vendor = dao.get(User.class, id);
-        if (vendor != null) {
-            dao.delete(vendor);
-        }
-    }
 
     @Override
     public User select(User bean) {

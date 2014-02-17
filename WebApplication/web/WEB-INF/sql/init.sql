@@ -92,7 +92,7 @@ create table t_material_doc(
     id int primary key,
     material_code varchar(32),
     document_grade varchar(32),
-    status int,
+    status varchar(32),
     Bom varchar(255),
     iqc_Standard varchar(255),
     iqc_card varchar(255),

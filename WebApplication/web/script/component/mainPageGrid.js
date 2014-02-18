@@ -53,9 +53,11 @@ var grid = Ext.create('Ext.grid.Panel', {
             handler: otherDelete
         }],
 //    title: 'All Products',
+    height:400,
     store: store,
     columnLines: true,
     selModel: Ext.create('Ext.selection.CheckboxModel'),
+    
     columns: [{
             header: 'id',
             dataIndex: 'id',

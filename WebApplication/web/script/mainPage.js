@@ -41,16 +41,16 @@ Ext.onReady(function() {
                 region: 'center',
                 title: '主体',
                 xtype: "panel",
-                items:[grid]
+                items:[grid,panel]
                 
-            }, 
-            {
+            }
+            , {
                 region: 'south',
                 title: '南',
-                xtype: "panel",
-                html: "子元素4",
-                height: 70
-            }]
+                xtype: "panel"
+        
+            }
+        ]
 
     });
     viewport.show();

@@ -7,7 +7,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Welcome to Spring Web MVC project</title>
-        <script type="text/javascript" src="<c:url value='/resources/newjavascript.js'/>"> </script>
+        <script type="text/javascript" src="<c:url value='/script/newjavascript.js'/>"> </script>
     </head>
 
     <body>

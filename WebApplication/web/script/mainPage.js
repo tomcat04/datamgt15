@@ -24,8 +24,8 @@ Ext.onReady(function() {
             }, {
                 region: 'west',
                 title: '导航栏',
-                xtype: "panel",
-                html: "子元素2",
+                xtype: "treepanel",
+                items:[menu],
                 width: 250
 
             }, 

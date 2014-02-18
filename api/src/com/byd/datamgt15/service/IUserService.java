@@ -20,6 +20,11 @@ public interface IUserService {
      */
     public void updateMyUser(User user);
     
+    /**
+     * 
+     * @param oldPassword
+     * @param newPassword 
+     */
     public void changeMyPassword(String oldPassword,String newPassword);
     
     /**
@@ -28,6 +33,10 @@ public interface IUserService {
      */
     public void updateUser(User user);
     
+    /**
+     * 
+     * @param user 
+     */
     public void addUser(User user);
     
     /**

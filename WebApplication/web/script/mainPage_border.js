@@ -13,7 +13,7 @@ Ext.onReady(function() {
         defaults: {
             split: true, //是否有分割线
             collapsible: true, //是否可以折叠
-            bodyStyle: 'padding:15px'
+            bodyStyle: 'padding:0px'
         },
         items: [{
                 region: 'north', //子元素的方位：north、west、east、center、south
@@ -41,7 +41,8 @@ Ext.onReady(function() {
                 region: 'center',
                 title: '主体',
                 xtype: "panel",
-                html: "子元素3"
+                items:[grid]
+                
             }, 
             {
                 region: 'south',
@@ -53,4 +54,5 @@ Ext.onReady(function() {
 
     });
     viewport.show();
+    store.loadPage(1);  
 });

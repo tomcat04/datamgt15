@@ -1,0 +1,57 @@
+{
+    "pageBean": {
+        "total": 99,
+        "list": [
+            {
+                "id": 1,
+                "recordId": "001",
+                "materialCode": "11089431-00",
+                "materialDesc": "蓝牙模块_ZYM-BT52M-V1.0_插件_RoHS_M00000",
+                "materialDesc2": "ZYM-BT52M",
+                "QMS": "ISO/TS16949:2009",
+                "vendorCode": "111",
+                "vendorName": "佳利",
+                "brand": "佳利",
+                "vendorGrade": "三级",
+                "phone": "0573-83651818",
+                "mobilePhone": "13509616210",
+                "email": "yuezy@glead.com.cn",
+                "deliveryCycle": "一周",
+                "deliveryStatus": "正常"
+            },
+            {
+                "id": 2,
+                "recordId": "002",
+                "materialCode": "10963553-00",
+                "materialDesc": "TIG-7910101_装饰面板_M00000",
+                "materialDesc2": "TIG-7910101",
+                "QMS": "ISO/TS16949:2009",
+                "vendorCode": "111",
+                "vendorName": "统合（苏州）",
+                "brand": "统合（苏州）",
+                "vendorGrade": "三级",
+                "phone": "0512-68092498",
+                "mobilePhone": "13451540382",
+                "email": "李婷婷leett@uniplas.com.sg 徐金龙xujl@uniplas.com.sg",
+                "deliveryCycle": "一周",
+                "deliveryStatus": "正常"
+            }, {
+                "id": 3,
+                "recordId": "0001",
+                "materialCode": "11089431-00",
+                "materialDesc": "蓝牙模块_ZYM-BT52M-V1.0_插件_RoHS_M00000",
+                "materialDesc2": "ZYM-BT52M",
+                "QMS": "ISO/TS16949:2009",
+                "vendorCode": "111",
+                "vendorName": "佳利",
+                "brand": "佳利",
+                "vendorGrade": "三级",
+                "phone": "0573-83651818",
+                "mobilePhone": "13509616210",
+                "email": "yuezy@glead.com.cn",
+                "deliveryCycle": "一周",
+                "deliveryStatus": "正常"
+            }
+        ]
+    }
+}

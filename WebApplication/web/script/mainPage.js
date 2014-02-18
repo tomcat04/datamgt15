@@ -23,10 +23,10 @@ Ext.onReady(function() {
                 height: 70
             }, {
                 region: 'west',
-                title: '西',
+                title: '导航栏',
                 xtype: "panel",
                 html: "子元素2",
-                width: 100
+                width: 250
 
             }, 
 //            {

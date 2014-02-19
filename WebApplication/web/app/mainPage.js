@@ -54,5 +54,5 @@ Ext.onReady(function() {
 
     });
     viewport.show();
-    store.loadPage(1);  
+    store.loadPage(1);
 });

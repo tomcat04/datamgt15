@@ -15,8 +15,7 @@ Ext.Loader.setConfig({
 Ext.application({
     name: "app",
     appFolder: "app",
-    requires: ['app.view.Viewport'],
-    controllers: [],
+    controllers: ['app.controller.TreeMenuController'],
     launch: function(profile) {
         Ext.create("app.view.Viewport").show();
     }

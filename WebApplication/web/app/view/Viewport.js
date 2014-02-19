@@ -50,6 +50,6 @@
             }
         ],
         initComponent : function(){
-                this.callParent(arguments);//这个arguments你懂，不懂Google  
+                this.callParent(arguments);
         }  
     });

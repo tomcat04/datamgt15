@@ -7,7 +7,7 @@ Ext.Loader.setConfig({
     enabled: true,
       paths: {  
           'app': 'app'  
-      }  
+      }
 });
 
 
@@ -20,4 +20,4 @@ Ext.application({
     launch: function(profile) {
         Ext.create("app.view.Viewport").show();
     }
-})
+});

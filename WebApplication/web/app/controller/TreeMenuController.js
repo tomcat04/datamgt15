@@ -12,8 +12,9 @@ Ext.define('app.controller.TreeMenuController', {
                 render:function(){
 //                    console.info('render');
                 },
-                itemclick:function(){
+                itemclick:function(view, record, item, index, e, eOpts){
 //                    console.info('itemclick');
+                        console.info(record);
                 }
             }
         });

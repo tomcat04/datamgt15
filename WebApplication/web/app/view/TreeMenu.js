@@ -27,7 +27,7 @@ Ext.define("app.view.TreeMenu", {
 //    title: 'Simple Tree',
 //    width: 200,
 //    forceFit: true,
-    id: "treeMenu",
+//    id: "treeMenu",
     store: menuStore,
     rootVisible: false,
     constructor: function(config) {

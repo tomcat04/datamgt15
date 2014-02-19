@@ -5,23 +5,28 @@
 
 var menuStore = Ext.create('Ext.data.TreeStore', {
     root: {
-        expanded: true,
-        children: [
-            { text: "detention", leaf: true },
-            { text: "homework", expanded: true, children: [
-                { text: "book report", leaf: true },
-                { text: "algebra", leaf: true}
-            ] },
-            { text: "buy lottery tickets", leaf: true }
-        ]
+        expanded: true
+//        children: [
+//            {text: "detention", leaf: true},
+//            {text: "homework", expanded: true, children: [
+//                    {text: "book report", leaf: true},
+//                    {text: "algebra", leaf: true}
+//                ]},
+//            {text: "buy lottery tickets", leaf: true}
+//        ]
+    },
+    proxy: {
+        type:  'ajax',
+        url:  '/script/data/MenuData.json'
     }
 });
 
-var menu = Ext.create('Ext.tree.Panel', {
-    title: 'Simple Tree',
-    width: 200,
-    height: 150,
+var treeMenu = Ext.create('Ext.tree.Panel', {
+//    title: 'Simple Tree',
+//    width: 200,
+//    forceFit: true,
     store: menuStore,
     rootVisible: false,
-    renderTo: Ext.getBody()
+    border: false
+//    renderTo: Ext.getBody()
 });

@@ -24,10 +24,10 @@ Ext.onReady(function() {
             }, {
                 region: 'west',
                 title: '导航栏',
-                xtype: "treepanel",
-                items:[menu],
+//                xtype: "treepanel",
+                items:[treeMenu],
                 width: 250
-
+ 
             }, 
 //            {
 //                region: 'east',

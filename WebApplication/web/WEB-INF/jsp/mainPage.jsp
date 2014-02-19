@@ -15,9 +15,9 @@
         <script type="text/javascript" src="<c:url value='/script/newjavascript.js'/>"></script>
         <script type="text/javascript" src="<c:url value='/resources/js/ext-all-debug.js'/>"></script>
         <script type="text/javascript" src="<c:url value='/script/model/MaterialFullInfo.js'/>"></script>
-        <script type="text/javascript" src="<c:url value='/script/component/mainPageGrid.js'/>"></script>
-        <script type="text/javascript" src="<c:url value='/script/component/materialDocPanel.js'/>"></script>
-         <script type="text/javascript" src="<c:url value='/script/component/treeMenu.js'/>"></script>
+        <script type="text/javascript" src="<c:url value='/script/view/mainPageGrid.js'/>"></script>
+        <script type="text/javascript" src="<c:url value='/script/view/materialDocPanel.js'/>"></script>
+         <script type="text/javascript" src="<c:url value='/script/view/treeMenu.js'/>"></script>
         <script type="text/javascript" src="<c:url value='/script/mainPage.js'/>"></script>
         <title>JSP Page</title>
     </head>

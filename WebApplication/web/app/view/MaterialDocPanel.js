@@ -4,7 +4,9 @@
  */
 
 
-var panel = Ext.create('Ext.panel.Panel', {  
+//var panel = Ext.create('Ext.panel.Panel', {  
+Ext.define("app.view.MaterialDocPanel",{
+    extend:"Ext.panel.Panel",
     title : 'panel标题',
     draggable : false, 
     items : [{

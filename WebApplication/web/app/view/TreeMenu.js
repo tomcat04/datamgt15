@@ -16,18 +16,24 @@ var menuStore = Ext.create('Ext.data.TreeStore', {
 //        ]
     },
     proxy: {
-        type:  'ajax',
-        url:  '/script/data/MenuData.json'
+        type: 'ajax',
+        url: '/data/MenuData.json'
     }
 });
 
-var treeMenu = Ext.create('Ext.tree.Panel', {
+//var treeMenu = Ext.create('Ext.tree.Panel', {
+Ext.define("app.view.TreeMenu", {
+    extend: "Ext.tree.Panel",
 //    title: 'Simple Tree',
 //    width: 200,
 //    forceFit: true,
     id: "treeMenu",
     store: menuStore,
     rootVisible: false,
+    constructor: function(config) {
+        this.callParent(arguments); // calls Ext.tip.ToolTip's constructor
+        //...
+    },
     border: false
 //    renderTo: Ext.getBody()
 });

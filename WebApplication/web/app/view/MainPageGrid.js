@@ -3,13 +3,13 @@
  * Each line should be prefixed with  * 
  */
 
-
+Ext.require("app.model.MaterialFullInfo");
 var store = new Ext.data.Store({
-    model: 'MaterialFullInfo',
+    model: 'app.model.MaterialFullInfo',
     pageSize: 20,
     proxy: {
         type: 'ajax',
-        url: '/script/data/MaterialFullInfoData.json',
+        url: '/data/MaterialFullInfoData.json',
         reader: {
             type: 'json',
             root: 'pageBean.list',
@@ -23,18 +23,22 @@ var cellEditing = Ext.create('Ext.grid.plugin.CellEditing', {
     clicksToEdit: 2
 });
 
-function add(){
-    
-};
+function add() {
 
-function alter(){
-    
-};
+}
+;
 
-function otherDelete(){
-    
-};
-var grid = Ext.create('Ext.grid.Panel', {
+function alter() {
+
+}
+;
+
+function otherDelete() {
+
+}
+;
+Ext.define('app.view.MainPageGrid', {
+    extend: "Ext.grid.Panel",
     tbar: [{
             xtype: 'button',
             text: '新增',
@@ -53,11 +57,10 @@ var grid = Ext.create('Ext.grid.Panel', {
             handler: otherDelete
         }],
 //    title: 'All Products',
-    height:400,
+    height: 400,
     store: store,
     columnLines: true,
     selModel: Ext.create('Ext.selection.CheckboxModel'),
-    
     columns: [{
             header: 'id',
             dataIndex: 'id',
@@ -155,8 +158,11 @@ var grid = Ext.create('Ext.grid.Panel', {
             dock: 'bottom',
             displayInfo: true
         }],
+    initComponent: function() {
+        this.callParent(arguments);//这个arguments你懂，不懂Google  
+        store.loadPage(1);
+    },
 //    renderTo: 'userMngDiv',
     plugins: [cellEditing]
 //             autoRender:true  
 });
-//store.loadPage(1);  

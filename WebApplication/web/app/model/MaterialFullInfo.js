@@ -4,7 +4,7 @@
  */
 
 
-Ext.define('MaterialFullInfo', {
+Ext.define('app.model.MaterialFullInfo', {
     extend: 'Ext.data.Model',
     fields: [{
             name: 'id',

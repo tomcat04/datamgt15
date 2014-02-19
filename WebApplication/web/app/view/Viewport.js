@@ -51,5 +51,5 @@
         ],
         initComponent : function(){
                 this.callParent(arguments);
-        }  
+        }
     });

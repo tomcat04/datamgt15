@@ -24,6 +24,7 @@ var menuStore = Ext.create('Ext.data.TreeStore', {
 //var treeMenu = Ext.create('Ext.tree.Panel', {
 Ext.define("app.view.TreeMenu", {
     extend: "Ext.tree.Panel",
+    alias : 'widget.treeMenu',
 //    title: 'Simple Tree',
 //    width: 200,
 //    forceFit: true,

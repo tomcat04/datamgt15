@@ -12,6 +12,7 @@ var cellEditing = Ext.create('Ext.grid.plugin.CellEditing', {
 Ext.define("app.view.MaterialExceptionLogGrid", {
     extend: "Ext.grid.Panel",
     alias: "widget.MaterialExceptionLogGrid",
+    title:"异常记录汇总",
     tbar: [{
             xtype: 'button',
             text: '新增',

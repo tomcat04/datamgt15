@@ -4,7 +4,7 @@
  */
 
 Ext.require("app.model.MaterialFullInfo");
-var store = new Ext.data.Store({
+var materialFullInfoStore = new Ext.data.Store({
     model: 'app.model.MaterialFullInfo',
     pageSize: 20,
     proxy: {
@@ -58,7 +58,7 @@ Ext.define('app.view.MainPageGrid', {
         }],
 //    title: 'All Products',
     height: 400,
-    store: store,
+    store: materialFullInfoStore,
     columnLines: true,
     selModel: Ext.create('Ext.selection.CheckboxModel'),
     columns: [{
@@ -154,13 +154,13 @@ Ext.define('app.view.MainPageGrid', {
     forceFit: true,
     dockedItems: [{
             xtype: 'pagingtoolbar',
-            store: store, // same store GridPanel is  using  
+            store: materialFullInfoStore, // same store GridPanel is  using  
             dock: 'bottom',
             displayInfo: true
         }],
     initComponent: function() {
         this.callParent(arguments);//
-        store.loadPage(1);
+        materialFullInfoStore.loadPage(1);
     },
 //    renderTo: 'userMngDiv',
     plugins: [cellEditing]

@@ -60,7 +60,7 @@ Ext.define('app.view.MainPageGrid', {
     height: 400,
     store: materialFullInfoStore,
     columnLines: true,
-    selModel: Ext.create('Ext.selection.CheckboxModel'),
+    selModel: Ext.create('Ext.selection.RowModel',{mode:"MULTI"}),
     columns: [{
             header: 'id',
             dataIndex: 'id',

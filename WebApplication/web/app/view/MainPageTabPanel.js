@@ -5,7 +5,7 @@ Ext.define("app.view.MainPageTabPanel", {
     alias:'widget.mainPageTabPanel',
     items: [
         {
-            title: '首页', //TODO : use the menu text
+            title: '物料信息首页', //TODO : use the menu text
             id:'myMainPageTab',
             items: [
                 Ext.create("Ext.panel.Panel", {

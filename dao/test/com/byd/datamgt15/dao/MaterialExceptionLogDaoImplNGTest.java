@@ -63,7 +63,7 @@ public class MaterialExceptionLogDaoImplNGTest {
         bean.setExceptionDesc("异常描述");
         bean.setLogTime(new Date());
         bean.setMaterialCode("11111");
-        bean.setStatus(1);
+        bean.setStatus("1");
        
         materialExceptionLogDao.merge(bean);
     }

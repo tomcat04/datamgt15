@@ -112,7 +112,7 @@ log_time date,
 batch varchar(32),
 exception_desc varchar(255),
 deal_desc  varchar(255),
-status int
+status varchar(32)
 );
 
 /**

@@ -10,6 +10,6 @@
         <property name="batch" column="batch" type="string"  /> 
         <property name="exceptionDesc" column="exception_desc" type="string"  /> 
         <property name="dealDesc" column="deal_desc" type="string"  /> 
-        <property name="status" column="status" type="integer"  /> 
+        <property name="status" column="status" type="string"  /> 
     </class>
 </hibernate-mapping>

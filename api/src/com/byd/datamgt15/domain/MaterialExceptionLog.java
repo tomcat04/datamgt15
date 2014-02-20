@@ -19,7 +19,7 @@ public class MaterialExceptionLog {
     String batch;
     String exceptionDesc;
     String dealDesc;
-    Integer status;
+    String status;
 
     public Integer getId() {
         return id;
@@ -69,11 +69,11 @@ public class MaterialExceptionLog {
         this.dealDesc = dealDesc;
     }
 
-    public Integer getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(Integer status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 

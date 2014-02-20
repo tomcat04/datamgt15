@@ -14,6 +14,7 @@ public class MaterialExceptionLog {
 
     Integer id;
     String materialCode;
+    String vendorCode;
     Date logTime;
     String batch;
     String exceptionDesc;
@@ -74,6 +75,14 @@ public class MaterialExceptionLog {
 
     public void setStatus(Integer status) {
         this.status = status;
+    }
+
+    public String getVendorCode() {
+        return vendorCode;
+    }
+
+    public void setVendorCode(String vendorCode) {
+        this.vendorCode = vendorCode;
     }
 
     

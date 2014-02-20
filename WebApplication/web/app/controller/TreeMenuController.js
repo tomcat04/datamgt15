@@ -15,7 +15,7 @@ Ext.define('app.controller.TreeMenuController', {
                     var myMenuId = record.get("id");
                     var tab = tabs.query('[title=' + myTabTitle + ']');
                     if (tab.length === 0) {
-                        if (myMenuId === "MaterialExceptionLog") {
+                        if (myMenuId === "MaterialExceptionLog") {//TODO:菜单与tab对应方式优化
                             var newtab = tabs.add({
                                 title: myTabTitle,
                                 closable: true,

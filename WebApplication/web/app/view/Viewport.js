@@ -11,7 +11,6 @@
         layout: 'border',
         defaults: {
             split: true, //是否有分割线
-            collapsible: true, //是否可以折叠
             bodyStyle: 'padding:0px'
         },
         items: [{
@@ -26,6 +25,7 @@
 //                xtype: "treepanel",
                 items:[Ext.create("app.view.TreeMenu")],
                 width: 250,
+                collapsible: true, 
                 layout:'fit'
             }, 
 //            {
@@ -38,9 +38,9 @@
 //            }, 
             {
                 region: 'center',
-                title: '主体',
+//                title: '主体',
                 xtype: "panel",
-                items:[Ext.create("app.view.MainPageGrid"),Ext.create("app.view.MaterialDocPanel")]
+                items:[Ext.create("app.view.MainPageTabPanel")]
             }
             , {
                 region: 'south',

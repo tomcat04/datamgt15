@@ -1,6 +1,7 @@
     //border
     Ext.define('app.view.Viewport', {
         extend:'Ext.container.Viewport',
+        alias:'widget.myviewport',
         requires:[
             "app.view.TreeMenu"
         ],
@@ -23,7 +24,7 @@
                 region: 'west',
                 title: '导航栏',
 //                xtype: "treepanel",
-                items:[Ext.create("app.view.TreeMenu")],
+                items:[Ext.create("app.view.TreeMenu",{id:'myTreeMenu'})],
                 width: 250,
                 collapsible: true, 
                 layout:'fit'
@@ -40,7 +41,7 @@
                 region: 'center',
 //                title: '主体',
                 xtype: "panel",
-                items:[Ext.create("app.view.MainPageTabPanel")]
+                items:[Ext.create("app.view.MainPageTabPanel",{id:'myMainPageTabPanel'})]
             }
             , {
                 region: 'south',

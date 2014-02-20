@@ -14,7 +14,7 @@ Ext.define('app.controller.TreeMenuController', {
                 },
                 itemclick:function(view, record, item, index, e, eOpts){
 //                    console.info('itemclick');
-                        console.info(record);
+//                        console.info(record);
                 }
             }
         });

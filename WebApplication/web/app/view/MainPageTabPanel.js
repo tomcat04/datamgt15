@@ -6,7 +6,6 @@ Ext.define("app.view.MainPageTabPanel", {
     items: [
         {
             title: '物料信息首页', //TODO : use the menu text
-            id:'myMainPageTab',
             items: [
                 Ext.create("Ext.panel.Panel", {
                     items: [Ext.create("app.view.MainPageGrid"),

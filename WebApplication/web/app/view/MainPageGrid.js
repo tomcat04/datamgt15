@@ -159,7 +159,7 @@ Ext.define('app.view.MainPageGrid', {
             displayInfo: true
         }],
     initComponent: function() {
-        this.callParent(arguments);//这个arguments你懂，不懂Google  
+        this.callParent(arguments);//
         store.loadPage(1);
     },
 //    renderTo: 'userMngDiv',

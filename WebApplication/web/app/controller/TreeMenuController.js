@@ -12,14 +12,25 @@ Ext.define('app.controller.TreeMenuController', {
                 itemclick: function(view, record, item, index, e, eOpts) {
                     var tabs = Ext.getCmp('myMainPageTabPanel');
                     var myTabTitle = record.get('text');
+                    var myMenuId = record.get("id");
                     var tab = tabs.query('[title=' + myTabTitle + ']');
                     if (tab.length === 0) {
-                        var newtab = tabs.add({
-                            title: myTabTitle,
-                            closable: true
-                        });
-                        tabs.setActiveTab(newtab);
-                    }else{
+                        if (myMenuId === "MaterialExceptionLog") {
+                            var newtab = tabs.add({
+                                title: myTabTitle,
+                                closable: true,
+                                items: [
+                                    Ext.create("Ext.panel.Panel", {
+                                        items: [
+                                            Ext.create("app.view.MaterialExceptionLogGrid")
+                                        ]
+                                    })
+                                ]
+                            });
+                            tabs.setActiveTab(newtab);
+                        }
+
+                    } else {
                         tabs.setActiveTab(tab[0]);
                     }
 

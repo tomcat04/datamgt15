@@ -1,0 +1,17 @@
+{
+    "pageBean": {
+        "total": 99,
+        "list": [
+            {
+                "id": 1,
+                "materialCode": "11089431-00",
+                "vendorCode": "111",
+                "logTime": "2014-01-01",
+                "batch": "2014090909111",
+                "exceptionDesc": "异常内容描述",
+                "dealDesc": "解决对策描述",
+                "status": "打开"
+            }
+        ]
+    }
+}

@@ -1,6 +1,6 @@
 [
-    {"text": "物料信息首页", "id": "MainPageTabPanel", "iconCls": "manage", "leaf": true},
-    {"text": "物料异常", "id": "MaterialExceptionLogTabPanel", "iconCls": "manage", "leaf": true},
-    {"text": "用户信息", "id": "3", "UserTabPanel": "manage", "leaf": true},
-    {"text": "权限相关", "id": "4", "AuthorityTabPanel": "manage", "leaf": true}
+    {"text": "物料信息首页", "id": "MainPage", "iconCls": "manage", "leaf": true},
+    {"text": "物料异常", "id": "MaterialExceptionLog", "iconCls": "manage", "leaf": true},
+    {"text": "用户信息", "id": "User", "iconCls": "manage", "leaf": true},
+    {"text": "权限相关", "id": "Authority", "iconCls": "manage", "leaf": true}
 ]

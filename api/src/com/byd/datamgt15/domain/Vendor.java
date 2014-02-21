@@ -11,7 +11,7 @@ package com.byd.datamgt15.domain;
 public class Vendor {
 
     Integer id;
-    String vendorCode;
+    String vendorCode; //注意本次系统中无供应商代码
     String vendorName;
     String brand;
     String vendorGrade;

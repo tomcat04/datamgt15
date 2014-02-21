@@ -1,10 +1,3 @@
-/* 
- * Here comes the text of your license
- * Each line should be prefixed with  * 
- */
-
-
-//var panel = Ext.create('Ext.panel.Panel', {  
 Ext.define("app.view.MaterialDocPanel",{
     extend:"Ext.panel.Panel",
     title : 'panel标题',

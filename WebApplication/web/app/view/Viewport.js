@@ -46,8 +46,5 @@
                 title: '南',
                 xtype: "panel"
             }
-        ],
-        initComponent : function(){
-                this.callParent(arguments);
-        }
+        ]
     });

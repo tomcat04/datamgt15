@@ -15,13 +15,12 @@ Ext.define('app.controller.TreeMenuController', {
                     var myMenuId = record.get("id");
                     var tab = tabs.query('[title=' + myTabTitle + ']');
                     if (tab.length === 0) {
-                        var a = Ext.create("app.view.MaterialExceptionLogTabPanel")
                         if (myMenuId === "MaterialExceptionLog") {//TODO:菜单与tab对应方式优化
                             var newtab = tabs.add({
                                 title: myTabTitle,
                                 closable: true,
                                 items: [
-                             a
+                                    Ext.create("app.view.MaterialExceptionLogTabPanel")
                                 ]
                             });
                             tabs.setActiveTab(newtab);

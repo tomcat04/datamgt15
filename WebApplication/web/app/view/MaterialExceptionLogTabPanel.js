@@ -13,7 +13,7 @@ Ext.define("app.view.MaterialExceptionLogTabPanel", {
 //        })
 //    ],
     constructor: function(config) {
-        this.callParent(arguments); // calls Ext.panel.Panel's constructor
+        this.callParent(arguments); 
         this.insert(
                 Ext.create("Ext.panel.Panel", {
                     items: [

@@ -39,6 +39,7 @@
             {
                 region: 'center',
                 xtype: "panel",
+                layout:'fit',
                 items:[Ext.create("app.view.MainPageTabPanel",{id:'myMainPageTabPanel'})]
             }
             , {

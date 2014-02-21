@@ -6,7 +6,6 @@
             "app.view.TreeMenu"
         ],
         title: '容器面板',
-//        renderTo: Ext.getBody(),
         width: 400,
         height: 300,
         layout: 'border',
@@ -39,7 +38,6 @@
 //            }, 
             {
                 region: 'center',
-//                title: '主体',
                 xtype: "panel",
                 items:[Ext.create("app.view.MainPageTabPanel",{id:'myMainPageTabPanel'})]
             }
@@ -47,7 +45,6 @@
                 region: 'south',
                 title: '南',
                 xtype: "panel"
-        
             }
         ],
         initComponent : function(){

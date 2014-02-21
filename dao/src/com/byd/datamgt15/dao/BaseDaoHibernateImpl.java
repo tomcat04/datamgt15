@@ -31,7 +31,7 @@ public abstract class BaseDaoHibernateImpl<T> implements IBaseDao<T> {
     /**
      * 子类中T所对应的类型
      */
-    private final Class entityClass;
+    private final Class entityClass; //TODO:类属性此处单例有问题
 
     public BaseDaoHibernateImpl() {
         Type genType = getClass().getGenericSuperclass();

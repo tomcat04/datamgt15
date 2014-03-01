@@ -5,7 +5,7 @@
 
 Ext.define("app.store.MaterialExceptionLogStore", {
     model: 'app.model.MaterialExceptionLogModel',
-    storeId:'MaterialExceptionLogStore',
+    storeId: 'MaterialExceptionLogStore',
     extend: "Ext.data.Store",
     pageSize: 20,
     proxy: {
@@ -15,6 +15,9 @@ Ext.define("app.store.MaterialExceptionLogStore", {
             type: 'json',
             root: 'pageBean.list',
             totalProperty: 'pageBean.total'
+        },
+        writer: {
+            type: 'json'
         }
     },
     autoLoad: false

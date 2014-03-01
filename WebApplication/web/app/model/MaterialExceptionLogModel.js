@@ -14,7 +14,19 @@ Ext.define("app.model.MaterialExceptionLogModel",{
             name: 'materialCode',
             type: 'string'
         }, {
-            name: 'vendorCode',
+            name: 'materialDesc',
+            type: 'string'
+        }, {
+            name: 'materialDesc2',
+            type: 'string'
+        }, {
+            name: 'QMS',
+            type: 'string'
+        }, {
+            name: 'vendorName',
+            type: 'string'
+        }, {
+            name: 'brand',
             type: 'string'
         }, {
             name: 'logTime',

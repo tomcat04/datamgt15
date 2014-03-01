@@ -16,16 +16,11 @@ Ext.define('app.controller.TreeMenuController', {
                     var tab = tabs.query('[title=' + myTabTitle + ']');
                     if (tab.length === 0) {
                         if (myMenuId === "MaterialExceptionLog") {//TODO:菜单与tab对应方式优化
-                            var newtab = tabs.add({
-                                title: myTabTitle,
-                                closable: true,
-                                items: [
-                                    Ext.create("app.view.MaterialExceptionLogTabPanel")
-                                ]
-                            });
-                            tabs.setActiveTab(newtab);
+                            this.openTab(tabs, myTabTitle, "app.view.MaterialExceptionLogTabPanel");
+                        } else if (myMenuId === 'MaterialExceptionReport') {
+                            this.openTab(tabs, myTabTitle, "app.view.MaterialExceptionReportGrid");
                         }
-
+                        
                     } else {
                         tabs.setActiveTab(tab[0]);
                     }
@@ -34,5 +29,15 @@ Ext.define('app.controller.TreeMenuController', {
             }
         });
 
+    },
+    openTab: function(parentTabs, title, viewName) {
+        var newtab = parentTabs.add({
+            title: title,
+            closable: true,
+            items: [
+                Ext.create(viewName)
+            ]
+        });
+        parentTabs.setActiveTab(newtab);
     }
 });  

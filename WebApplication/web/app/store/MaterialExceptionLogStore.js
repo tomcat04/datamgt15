@@ -20,5 +20,5 @@ Ext.define("app.store.MaterialExceptionLogStore", {
             type: 'json'
         }
     },
-    autoLoad: false
+    autoLoad: true //表格自动加载
 });

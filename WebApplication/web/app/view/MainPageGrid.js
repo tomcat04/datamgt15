@@ -42,18 +42,22 @@ Ext.define('app.view.MainPageGrid', {
     tbar: [{
             xtype: 'button',
             text: '新增',
+            iconCls: 'icon-add',
             handler: add
         }, {
             xtype: 'button',
-            text: '提交修改',
+            text: '删除',
+            iconCls: 'icon-delete',
             handler: alter
         }, {
             xtype: 'button',
-            text: '删除',
+            text: '保存',
+            iconCls: 'icon-save',
             handler: otherDelete
         }, {
             xtype: 'button',
-            text: '导出Excel',
+            text: '导出',
+            iconCls: 'icon-excel',
             handler: otherDelete
         }],
 //    title: 'All Products',

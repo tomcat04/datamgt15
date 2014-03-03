@@ -92,9 +92,9 @@ Ext.define('app.view.MaterialExceptionReportGrid', {
         }],
     tbar:[
         {xtype:'button',text:'添加',iconCls: 'icon-add'},
-        {xtype:'button',text:'删除'},
-        {xtype:'button',text:'修改'},
-        {xtype:'button',text:'查看'}
+        {xtype:'button',text:'删除',iconCls: 'icon-delete'},
+        {xtype:'button',text:'修改',iconCls: 'icon-save'},
+        {xtype:'button',text:'导出',iconCls: 'icon-excel'}
     ],
     initComponent: function() {
         this.callParent(arguments);//

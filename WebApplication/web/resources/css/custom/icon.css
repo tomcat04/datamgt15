@@ -34,3 +34,7 @@ Each line should be prefixed with
 .icon-delete {
     background-image: url(images/delete.png) !important;
 }
+
+.icon-excel {
+    background-image: url(images/excel.png) !important;
+}

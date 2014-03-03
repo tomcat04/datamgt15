@@ -11,7 +11,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link type="text/css" rel="stylesheet" href="<c:url value='/resources/css/ext-theme-gray/ext-theme-gray-all.css'/>" />
+        <link type="text/css" rel="stylesheet" href="<c:url value='/resources/css/ext-theme-neptune/ext-theme-neptune-all.css'/>" />
         <link type="text/css" rel="stylesheet" href="<c:url value='/resources/css/custom/icon.css'/>" />
         <script type="text/javascript" src="<c:url value='/resources/js/ext-all-debug.js'/>"></script>
         <script type="text/javascript" src="<c:url value='/app.js'/>"></script>

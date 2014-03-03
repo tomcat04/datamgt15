@@ -25,6 +25,7 @@ Ext.define('app.view.MaterialExceptionReportGrid', {
         }, {
             header: '物料描述',
             dataIndex: 'materialDesc',
+            width:350,
             editor: {
                 allowBlank: false
             }
@@ -83,7 +84,7 @@ Ext.define('app.view.MaterialExceptionReportGrid', {
                 allowBlank: false
             }
         }],
-    forceFit: true,
+//    forceFit: true,
     dockedItems: [{
             xtype: 'pagingtoolbar',
             store: this.store, // same store GridPanel is  using  
@@ -98,7 +99,7 @@ Ext.define('app.view.MaterialExceptionReportGrid', {
     ],
     initComponent: function() {
         this.callParent(arguments);//
-        
+
     }
 //    renderTo: 'userMngDiv',
 //             autoRender:true  

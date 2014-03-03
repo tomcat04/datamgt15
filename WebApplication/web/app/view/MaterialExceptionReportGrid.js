@@ -91,7 +91,7 @@ Ext.define('app.view.MaterialExceptionReportGrid', {
             displayInfo: true
         }],
     tbar:[
-        {xtype:'button',text:'添加',iconCls:'Add'},
+        {xtype:'button',text:'添加',iconCls: 'icon-add'},
         {xtype:'button',text:'删除'},
         {xtype:'button',text:'修改'},
         {xtype:'button',text:'查看'}

@@ -5,7 +5,7 @@
 
 Ext.define("app.store.MaterialExceptionLogStore", {
     model: 'app.model.MaterialExceptionLogModel',
-    storeId: 'MaterialExceptionLogStore',
+    storeId: 'myMaterialExceptionLogStore',
     extend: "Ext.data.Store",
     pageSize: 20,
     proxy: {

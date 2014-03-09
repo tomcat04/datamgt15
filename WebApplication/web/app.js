@@ -11,7 +11,10 @@
 Ext.application({
     name: "app",
     appFolder: "app",
-    controllers: ['app.controller.TreeMenuController'],
+    controllers: [
+        'app.controller.TreeMenuController',
+        'app.controller.MaterialExceptionReportController'
+    ],
     launch: function(profile) {
         Ext.create("app.view.Viewport",{id:"mainViewport"}).show();
     }

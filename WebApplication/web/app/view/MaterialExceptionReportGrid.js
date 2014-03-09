@@ -5,6 +5,7 @@ Ext.define('app.view.MaterialExceptionReportGrid', {
         type: 'fit',
         align: 'stretch'
     },
+    alias:'widget.MaterialExceptionReportGrid',
     store: 'MaterialExceptionLogStore',
     columnLines: true,
     height: 400,
@@ -98,10 +99,8 @@ Ext.define('app.view.MaterialExceptionReportGrid', {
     ],
     initComponent: function() {
         this.callParent(arguments);//
-
     }
-//    renderTo: 'userMngDiv',
-//             autoRender:true  
+
 });
 
 

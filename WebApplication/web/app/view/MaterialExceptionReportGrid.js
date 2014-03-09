@@ -5,8 +5,7 @@ Ext.define('app.view.MaterialExceptionReportGrid', {
         type: 'fit',
         align: 'stretch'
     },
-//    store: Ext.data.StoreManager.lookup('MaterialExceptionLogStore'),
-    store: Ext.create("app.store.MaterialExceptionLogStore"),
+    store: 'MaterialExceptionLogStore',
     columnLines: true,
     height: 400,
     selModel: Ext.create('Ext.selection.RowModel', {mode: "MULTI"}),
@@ -87,7 +86,7 @@ Ext.define('app.view.MaterialExceptionReportGrid', {
 //    forceFit: true,
     dockedItems: [{
             xtype: 'pagingtoolbar',
-            store: this.store, // same store GridPanel is  using  
+            store : 'MaterialExceptionLogStore',
             dock: 'bottom',
             displayInfo: true
         }],
@@ -103,6 +102,6 @@ Ext.define('app.view.MaterialExceptionReportGrid', {
     }
 //    renderTo: 'userMngDiv',
 //             autoRender:true  
-})
+});
 
 

@@ -3,19 +3,17 @@ var cellEditing = Ext.create('Ext.grid.plugin.CellEditing', {
 });
 
 function add() {
-
-}
-;
+  var addPanel =   Ext.create("app.view.MaterialFullInfoAddWindow");
+  addPanel.show();
+};
 
 function alter() {
 
-}
-;
+};
 
 function otherDelete() {
 
-}
-;
+};
 Ext.define('app.view.MainPageGrid', {
     extend: "Ext.grid.Panel",
     tbar: [{

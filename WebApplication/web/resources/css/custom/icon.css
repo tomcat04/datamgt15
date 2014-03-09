@@ -38,3 +38,7 @@ Each line should be prefixed with
 .icon-excel {
     background-image: url(images/excel.png) !important;
 }
+
+.upload-icon {
+    background-image: url(images/upload.png) !important;
+}

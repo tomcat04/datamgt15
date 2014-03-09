@@ -1,24 +1,3 @@
-/* 
- * Here comes the text of your license
- * Each line should be prefixed with  * 
- */
-
-Ext.require("app.model.MaterialFullInfo");
-var materialFullInfoStore = new Ext.data.Store({
-    model: 'app.model.MaterialFullInfo',
-    pageSize: 20,
-    proxy: {
-        type: 'ajax',
-        url: '/data/MaterialFullInfoData.json',
-        reader: {
-            type: 'json',
-            root: 'pageBean.list',
-            totalProperty: 'pageBean.total'
-        }
-    },
-    autoLoad: false
-});
-
 var cellEditing = Ext.create('Ext.grid.plugin.CellEditing', {
     clicksToEdit: 2
 });
@@ -62,7 +41,7 @@ Ext.define('app.view.MainPageGrid', {
         }],
 //    title: 'All Products',
     height: 400,
-    store: materialFullInfoStore,
+    store: 'MaterialFullInfoStore',
     columnLines: true,
     selModel: Ext.create('Ext.selection.RowModel',{mode:"MULTI"}),
     columns: [{
@@ -158,15 +137,12 @@ Ext.define('app.view.MainPageGrid', {
     forceFit: true,
     dockedItems: [{
             xtype: 'pagingtoolbar',
-            store: materialFullInfoStore, // same store GridPanel is  using  
+            store: 'MaterialFullInfoStore', // same store GridPanel is  using  
             dock: 'bottom',
             displayInfo: true
         }],
     initComponent: function() {
-        this.callParent(arguments);//
-        materialFullInfoStore.loadPage(1);
+        this.callParent(arguments);
     },
-//    renderTo: 'userMngDiv',
     plugins: [cellEditing]
-//             autoRender:true  
 });

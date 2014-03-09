@@ -13,6 +13,8 @@ Ext.application({
     appFolder: "app",
     controllers: [
         'app.controller.TreeMenuController',
+        'app.controller.MainPageGridController',
+        'app.controller.MaterialExceptionLogGridController',
         'app.controller.MaterialExceptionReportController'
     ],
     launch: function(profile) {

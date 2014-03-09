@@ -35,7 +35,7 @@ Ext.define("app.view.MaterialExceptionLogGrid", {
             handler: otherDelete
         }],
     height: 400,
-    store: Ext.create("app.store.MaterialExceptionLogStore"),
+    store: 'MaterialExceptionLogStore',
     columnLines: true,
     selModel: Ext.create('Ext.selection.RowModel',{mode:"MULTI"}),
     columns: [{
@@ -89,7 +89,7 @@ Ext.define("app.view.MaterialExceptionLogGrid", {
     forceFit: true,
     dockedItems: [{
             xtype: 'pagingtoolbar',
-            store: this.store, // same store GridPanel is  using  
+            store: 'MaterialExceptionLogStore', // same store GridPanel is  using  
             dock: 'bottom',
             displayInfo: true
         }],

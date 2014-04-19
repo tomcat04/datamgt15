@@ -5,7 +5,7 @@ Ext.define("app.store.MenuStore", {
     },
     proxy: {
         type: 'ajax',
-        url: '/WebApplication/app/data/MenuData.json'
+        url: '/WebApplication/data/MenuData.json'
     },
     autoLoad: true //表格自动加载
 });

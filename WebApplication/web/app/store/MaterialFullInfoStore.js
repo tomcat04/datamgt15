@@ -4,7 +4,7 @@ Ext.define('app.store.MaterialFullInfoStore', {
     pageSize: 20,
     proxy: {
         type: 'ajax',
-        url: '/WebApplication/app/data/MaterialFullInfoData.json',
+        url: '/WebApplication/data/MaterialFullInfoData.json',
         reader: {
             type: 'json',
             root: 'pageBean.list',

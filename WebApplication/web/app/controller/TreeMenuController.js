@@ -1,14 +1,16 @@
-/* 
- * Here comes the text of your license
- * Each line should be prefixed with  * 
- */
 
 
 Ext.define('app.controller.TreeMenuController', {
     extend: 'Ext.app.Controller',
+     views:[
+      'TreeMenu'  
+    ],
+    stores:[
+        'MenuStore'
+    ],
     init: function() {
         this.control({
-            'treeMenu': {
+            'TreeMenu': {
                 itemclick: function(view, record, item, index, e, eOpts) {
                     var tabs = Ext.getCmp('myMainPageTabPanel');
                     var myTabTitle = record.get('text');
@@ -40,4 +42,5 @@ Ext.define('app.controller.TreeMenuController', {
         });
         parentTabs.setActiveTab(newtab);
     }
+   
 });  

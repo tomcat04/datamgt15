@@ -5,12 +5,11 @@
 
 Ext.define("app.store.MaterialExceptionLogStore", {
     model: 'app.model.MaterialExceptionLogModel',
-//    storeId: 'myMaterialExceptionLogStore',
     extend: "Ext.data.Store",
     pageSize: 20,
     proxy: {
         type: 'ajax',
-        url: '/data/MaterialExceptionLogData.json',
+        url: '/WebApplication/app/data/MaterialExceptionLogData.json',
         reader: {
             type: 'json',
             root: 'pageBean.list',

@@ -1,27 +1,12 @@
-/* 
- * Here comes the text of your license
- * Each line should be prefixed with  * 
- */
 
-var menuStore = Ext.create('Ext.data.TreeStore', {
-    root: {
-        expanded: true
-    },
-    proxy: {
-        type: 'ajax',
-        url: '/data/MenuData.json'
-    }
-});
-
-//var treeMenu = Ext.create('Ext.tree.Panel', {
 Ext.define("app.view.TreeMenu", {
     extend: "Ext.tree.Panel",
-    alias : 'widget.treeMenu',
+    alias : 'widget.TreeMenu',
 //    title: 'Simple Tree',
 //    width: 200,
 //    forceFit: true,
 //    id: "treeMenu",
-    store: menuStore,
+    store: 'MenuStore',
     rootVisible: false,
     constructor: function(config) {
         this.callParent(arguments); // calls Ext.tip.ToolTip's constructor

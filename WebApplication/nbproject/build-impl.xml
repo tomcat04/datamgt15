@@ -853,13 +853,13 @@ exists or setup the property manually. For example like this:
                 COMPILATION SECTION
             -->
     <target depends="init" if="no.dist.ear.dir" name="deps-module-jar" unless="no.deps">
-        <ant antfile="${project.Exception}/build.xml" inheritall="false" target="jar">
-            <property name="deploy.on.save" value="false"/>
-        </ant>
         <ant antfile="${project.api}/build.xml" inheritall="false" target="jar">
             <property name="deploy.on.save" value="false"/>
         </ant>
         <ant antfile="${project.dao}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.exception}/build.xml" inheritall="false" target="jar">
             <property name="deploy.on.save" value="false"/>
         </ant>
         <ant antfile="${project.service}/build.xml" inheritall="false" target="jar">
@@ -870,13 +870,13 @@ exists or setup the property manually. For example like this:
         </ant>
     </target>
     <target depends="init" if="dist.ear.dir" name="deps-ear-jar" unless="no.deps">
-        <ant antfile="${project.Exception}/build.xml" inheritall="false" target="jar">
-            <property name="deploy.on.save" value="false"/>
-        </ant>
         <ant antfile="${project.api}/build.xml" inheritall="false" target="jar">
             <property name="deploy.on.save" value="false"/>
         </ant>
         <ant antfile="${project.dao}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.exception}/build.xml" inheritall="false" target="jar">
             <property name="deploy.on.save" value="false"/>
         </ant>
         <ant antfile="${project.service}/build.xml" inheritall="false" target="jar">
@@ -1034,8 +1034,8 @@ exists or setup the property manually. For example like this:
         <copyfiles files="${libs.hibernate-support.classpath}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${reference.dao.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${reference.api.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
-        <copyfiles files="${reference.Exception.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${reference.service.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+        <copyfiles files="${reference.exception.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${reference.util.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${libs.aopalliance.classpath}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <mkdir dir="${build.web.dir}/META-INF"/>
@@ -1047,8 +1047,8 @@ exists or setup the property manually. For example like this:
         <copyfiles files="${libs.hibernate-support.classpath}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${reference.dao.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${reference.api.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${reference.Exception.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${reference.service.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${reference.exception.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${reference.util.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${libs.aopalliance.classpath}" todir="${build.web.dir}/WEB-INF/lib"/>
     </target>
@@ -1464,9 +1464,9 @@ exists or setup the property manually. For example like this:
                 CLEANUP SECTION
             -->
     <target depends="init" name="deps-clean" unless="no.deps">
-        <ant antfile="${project.Exception}/build.xml" inheritall="false" target="clean"/>
         <ant antfile="${project.api}/build.xml" inheritall="false" target="clean"/>
         <ant antfile="${project.dao}/build.xml" inheritall="false" target="clean"/>
+        <ant antfile="${project.exception}/build.xml" inheritall="false" target="clean"/>
         <ant antfile="${project.service}/build.xml" inheritall="false" target="clean"/>
         <ant antfile="${project.util}/build.xml" inheritall="false" target="clean"/>
     </target>

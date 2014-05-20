@@ -15,7 +15,7 @@
         <link type="text/css" rel="stylesheet" href="<c:url value='/resources/css/custom/icon.css'/>" />
         <script type="text/javascript" src="<c:url value='/resources/js/bootstrap.js'/>"></script>
         <script type="text/javascript">
-            "${pageContext.request.contextPath}";
+           var contextPath =  "${pageContext.request.contextPath}";
         </script>
         <script type="text/javascript" src="<c:url value='/app.js'/>"></script>
         <title>JSP Page</title>

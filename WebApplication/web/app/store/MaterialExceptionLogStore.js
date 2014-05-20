@@ -1,15 +1,10 @@
-/* 
- * Here comes the text of your license
- * Each line should be prefixed with  * 
- */
-
 Ext.define("app.store.MaterialExceptionLogStore", {
     model: 'app.model.MaterialExceptionLogModel',
     extend: "Ext.data.Store",
     pageSize: 20,
     proxy: {
-        type: 'ajax',
-        url: '/WebApplication/data/MaterialExceptionLogData.json',
+        type: 'rest',
+        url: contextPath+'/MaterialExceptionLogs',
         reader: {
             type: 'json',
             root: 'pageBean.list',
@@ -19,5 +14,5 @@ Ext.define("app.store.MaterialExceptionLogStore", {
             type: 'json'
         }
     },
-    autoLoad: true //表格自动加载
+    autoLoad: false //表格自动加载
 });

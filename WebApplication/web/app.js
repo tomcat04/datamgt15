@@ -1,7 +1,5 @@
   Ext.Loader.setConfig({enabled: true});
 
-
-
 Ext.application({
     name: "app",
     appFolder: "/WebApplication/app",

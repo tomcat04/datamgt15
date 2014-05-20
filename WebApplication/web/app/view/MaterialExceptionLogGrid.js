@@ -1,9 +1,3 @@
-/* 
- * Here comes the text of your license
- * Each line should be prefixed with  * 
- */
-
-
 
 var cellEditing = Ext.create('Ext.grid.plugin.CellEditing', {
     clicksToEdit: 2

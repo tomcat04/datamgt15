@@ -12,4 +12,23 @@
         <property name="dealDesc" column="deal_desc" type="string"  /> 
         <property name="status" column="status" type="string"  /> 
     </class>
+
+    <class name="com.byd.datamgt15.pojo.MaterialExceptionLogView" table="v_material_exception_log">
+        <id name="id" column="id" type="integer">
+            <generator class="increment"/>
+        </id>
+        <property name="materialCode" column="material_code" type="string"  /> 
+        <property name="materialDesc" column="material_desc" type="string"  />
+        <property name="materialDesc2" column="material_desc2" type="string"  />
+        <property name="itemFor" column="item_for" type="string"  />
+        <property name="vendorName" column="VENDOR_NAME" type="java.lang.String"  /> 
+        <property name="brand" column="BRAND" type="java.lang.String"  /> 
+
+        <property name="logTime" column="log_time" type="date"  /> 
+        <property name="batch" column="batch" type="string"  /> 
+        <property name="exceptionDesc" column="exception_desc" type="string"  /> 
+        <property name="dealDesc" column="deal_desc" type="string"  /> 
+        <property name="status" column="status" type="string"  /> 
+        
+    </class>
 </hibernate-mapping>

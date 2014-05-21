@@ -14,5 +14,7 @@
 
     <!-- PERSISTENCE SUPPORT (jpa, hibernate, etc) -->
     <import resource="classpath*:/hibernate_SpringXMLConfig.xml"/>
-    
+    <import resource="classpaht*:/WebSpringXMLConfig.xml"/>
+    <import resource="classpaht*:/ServiceSpringXMLConfig.xml"/>
+
 </beans>

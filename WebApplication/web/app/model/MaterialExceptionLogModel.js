@@ -14,10 +14,12 @@ Ext.define("app.model.MaterialExceptionLogModel",{
         }, {
             name: 'materialDesc2',
             type: 'string'
-        }, {
-            name: 'QMS',
+        }, 
+        {
+            name: 'itemFor',
             type: 'string'
-        }, {
+        }, 
+        {
             name: 'vendorName',
             type: 'string'
         }, {

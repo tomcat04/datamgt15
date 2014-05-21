@@ -9,6 +9,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.hibernate.criterion.DetachedCriteria;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -29,11 +31,11 @@ public class MaterialExceptionLogDaoImplNGTest {
     private final Long tag = Calendar.getInstance().getTimeInMillis();
 
     public MaterialExceptionLogDaoImplNGTest() {
-      try{
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("hibernate_SpringXMLConfig.xml");
-        materialExceptionLogDao = applicationContext.getBean(IMaterialExceptionLogDao.class);
-        }catch(BeansException ex){
-            Logger.getLogger(this.getClass().getName()).log(Level.SEVERE,"初始化Spring失败", ex);
+        try {
+            ApplicationContext applicationContext = new ClassPathXmlApplicationContext("hibernate_SpringXMLConfig.xml");
+            materialExceptionLogDao = applicationContext.getBean(IMaterialExceptionLogDao.class);
+        } catch (BeansException ex) {
+            Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, "初始化Spring失败", ex);
         }
     }
 
@@ -58,13 +60,13 @@ public class MaterialExceptionLogDaoImplNGTest {
         //test insert
         System.out.println("merge");
         MaterialExceptionLog bean = new MaterialExceptionLog();
-        bean.setBatch("batch"+tag);
+        bean.setBatch("batch" + tag);
         bean.setDealDesc("异常处理描述");
         bean.setExceptionDesc("异常描述");
         bean.setLogTime(new Date());
         bean.setMaterialCode("11111");
         bean.setStatus("1");
-       
+
         materialExceptionLogDao.merge(bean);
     }
 
@@ -77,12 +79,22 @@ public class MaterialExceptionLogDaoImplNGTest {
     @Test
     public void testSelect() {
         System.out.println("select");
-    
+
         MaterialExceptionLog params = new MaterialExceptionLog();
         params.setId(1);
         MaterialExceptionLog select = materialExceptionLogDao.select(params);
         assertNotNull(select);
-      
+
+    }
+
+    @Test
+    public void testSelectViewListByPage() {
+        System.out.println("selectViewListByPage");
+        DetachedCriteria detachedCriteria = DetachedCriteria.forClass(MaterialExceptionLog.class);
+
+        detachedCriteria.add(Restrictions.eq("batch", "batch"+tag));
+        materialExceptionLogDao.selectViewListByPage(detachedCriteria, 1, 19);
+
     }
 
 }

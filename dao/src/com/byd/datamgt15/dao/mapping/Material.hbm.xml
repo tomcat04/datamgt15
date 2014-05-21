@@ -9,5 +9,6 @@
         <property name="materialDesc" column="MATERIAL_DESC" type="string"  />
         <property name="image" column="IMAGE" type="blob"  />
         <property name="QMS" column="QMS" type="string"  />
+        <property name="itemFor" column="ITEM_FOR" type="string"  />
     </class>
 </hibernate-mapping>

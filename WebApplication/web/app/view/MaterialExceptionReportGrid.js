@@ -37,7 +37,7 @@ Ext.define('app.view.MaterialExceptionReportGrid', {
             }
         }, {
             header: '适用项目',
-            dataIndex: 'QMS',
+            dataIndex: 'itemFor',
             editor: {
                 allowBlank: false
             }

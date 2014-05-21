@@ -5,6 +5,7 @@
 package com.byd.datamgt15.service;
 
 import com.byd.datamgt15.domain.MaterialExceptionLog;
+import com.byd.datamgt15.pojo.MaterialExceptionLogView;
 import java.util.List;
 
 /**
@@ -14,11 +15,12 @@ import java.util.List;
  */
 public interface IMaterialExceptionLogService {
 
-    public List<MaterialExceptionLog> getList(String materialCode);
+//    public List<MaterialExceptionLog> getList(String materialCode);
     
     public void add(MaterialExceptionLog materialExceptionLog);
     
     public void update(MaterialExceptionLog materialExceptionLog);
     
+    public List <MaterialExceptionLogView> getList(String materialCode,Integer startNum, Integer endNum);
     
 }

@@ -16,5 +16,5 @@
 ">
 
     
-    
+    <context:annotation-config/>
 </beans>

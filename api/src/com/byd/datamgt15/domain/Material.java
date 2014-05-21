@@ -16,6 +16,11 @@ public class Material {
 
     byte[] image;
     String QMS;
+    
+    /**
+     * 适用项目
+     */
+    String itemFor;
 
     public Integer getId() {
         return id;
@@ -58,7 +63,13 @@ public class Material {
         this.QMS = QMS;
     }
 
+    public String getItemFor() {
+        return itemFor;
+    }
+
+    public void setItemFor(String itemFor) {
+        this.itemFor = itemFor;
+    }
+
    
-    
-    
 }

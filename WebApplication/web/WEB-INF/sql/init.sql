@@ -72,7 +72,7 @@ Role
 
 /**
 Material
- id, material_code, material_desc, image, QMS质量管理体系
+ id, material_code, material_desc, image, QMS质量管理体系, item_for 适用项目
 */
 
 create table t_material(
@@ -80,6 +80,7 @@ create table t_material(
     material_code varchar(32),
     material_desc varchar(255),
     image blob,
+    item_for varchar(64),
     QMS varchar(255)
 );
 
@@ -168,3 +169,30 @@ relation.delivery_cycle,
 relation.delivery_status
 from t_material_vendor_relation relation, t_vendor vendor,  t_material material
 where relation.material_Code = material.material_code and relation.vendor_Code = vendor.vendor_code;
+
+
+/**
+  *   物料异常
+  **/
+create view v_material_exception_log as 
+select 
+tlog.id,
+tlog.material_code,
+tmaterial.material_desc,
+tmvr.material_desc2,
+tmaterial.item_for,
+tvendor.vendor_name,
+tvendor.brand,
+tlog.log_time,
+tlog.batch,
+tlog.exception_desc,
+tlog.deal_desc,
+tlog.status
+
+from t_material_exception_log tlog ,t_material tmaterial , t_material_vendor_relation tmvr, t_vendor tvendor
+where tlog.material_code = tmaterial.material_code 
+and     tlog.material_code = tmvr.material_code
+and     tmvr.vendor_code   = tmvr.vendor_code
+and     tmvr.vendor_code  = tvendor.vendor_code
+
+

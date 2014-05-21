@@ -11,4 +11,11 @@
           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
 ">
     
+        <context:annotation-config/>
+
+    <bean id="materialExceptionLogService"  class="com.byd.datamgt15.service.MaterialExceptionLogServiceImpl"/>
+    
+    
+    
+    
 </beans>

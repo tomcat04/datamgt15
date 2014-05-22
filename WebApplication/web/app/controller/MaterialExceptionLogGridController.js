@@ -5,7 +5,6 @@ Ext.define('app.controller.MaterialExceptionLogGridController', {
             'button[id=MaterialExceptionLog_SearchBtn]': {
                 click: function() {
                     var materialCode = Ext.ComponentQuery.query("textfield[id=MaterialExceptionLog_materialCode]")[0].getValue();
-                    console.info(materialCode);
                     var store =  Ext.StoreManager.lookup('MaterialExceptionLogStore');
                     store.getProxy().setExtraParam('materialCode',materialCode);
                     store.load();

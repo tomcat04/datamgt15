@@ -15,12 +15,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.springframework.stereotype.Service;
 
 /**
  * 文档服务类实现
  *
  * @author ty
  */
+@Service
 public class DocumentServiceImpl implements IDocumentService {
 
     /**

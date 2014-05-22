@@ -7,8 +7,7 @@ Ext.define("app.store.MaterialExceptionLogStore", {
         url: contextPath+'/MaterialExceptionLogs',
         reader: {
             type: 'json',
-            root: 'pageBean.list',
-            totalProperty: 'pageBean.total'
+            root: 'datas'
         },
         writer: {
             type: 'json'

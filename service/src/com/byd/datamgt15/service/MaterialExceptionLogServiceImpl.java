@@ -11,6 +11,7 @@ import java.util.List;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  *
@@ -18,7 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @author Tian Yu <tian.yu5@byd.com>
  * @version V1.5
  */
-
+@Service
 public class MaterialExceptionLogServiceImpl implements IMaterialExceptionLogService {
 
     @Autowired

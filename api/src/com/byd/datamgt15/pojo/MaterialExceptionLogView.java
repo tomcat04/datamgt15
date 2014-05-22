@@ -4,6 +4,8 @@
  */
 package com.byd.datamgt15.pojo;
 
+import java.util.Date;
+
 /**
  *
  * @since 2014-05-21
@@ -23,7 +25,7 @@ public class MaterialExceptionLogView {
     String itemFor;
     String vendorName;
     String brand;
-    String logTime;
+    Date logTime;
     String batch;
     String exceptionDesc;
     String dealDesc;
@@ -85,11 +87,11 @@ public class MaterialExceptionLogView {
         this.brand = brand;
     }
 
-    public String getLogTime() {
+    public Date getLogTime() {
         return logTime;
     }
 
-    public void setLogTime(String logTime) {
+    public void setLogTime(Date logTime) {
         this.logTime = logTime;
     }
 

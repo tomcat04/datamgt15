@@ -23,12 +23,11 @@ public class MaterialExceptionLogDaoImpl extends BaseDaoHibernateImpl<MaterialEx
         dao.merge(bean);
     }
 
-
     @Override
     public MaterialExceptionLog select(MaterialExceptionLog bean) {
-        if(bean.getId()==null){
+        if (bean.getId() == null) {
             throw new AppException("参数不正确");
-        }else{
+        } else {
             return dao.get(MaterialExceptionLog.class, bean.getId());
         }
     }
@@ -37,5 +36,5 @@ public class MaterialExceptionLogDaoImpl extends BaseDaoHibernateImpl<MaterialEx
     public List<MaterialExceptionLogView> selectViewListByPage(DetachedCriteria detachedCriteria, Integer startNum, Integer endNum) {
         return dao.findByCriteria(detachedCriteria, startNum, endNum - startNum + 1);
     }
-    
+
 }

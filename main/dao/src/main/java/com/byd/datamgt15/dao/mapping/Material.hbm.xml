@@ -11,4 +11,26 @@
         <property name="QMS" column="QMS" type="string"  />
         <property name="itemFor" column="ITEM_FOR" type="string"  />
     </class>
+
+    <class name="com.byd.datamgt15.pojo.MaterialFullInfoView" table="V_MATERIAL_FULL_INFO">
+        <id name="id" column="id" type="integer">
+            <generator class="increment"/>
+        </id>
+        <property name="recordId" column="RECORDID" type="string"  />
+        <property name="materialCode" column="MATERIAL_CODE" type="string"  />
+        <property name="materialDesc" column="MATERIAL_DESC" type="string"  />
+        <property name="materialDesc2" column="MATERIAL_DESC2" type="string"  />
+        <!--<property name="image" column="IMAGE" type="blob"  />-->
+        <property name="QMS" column="QMS" type="string"  />
+        <!--        <property name="itemFor" column="ITEM_FOR" type="string"  />-->
+        <property name="vendorCode" column="VENDOR_CODE" type="string"  /> 
+        <property name="vendorName" column="VENDOR_NAME" type="string"  /> 
+        <property name="brand" column="BRAND" type="string"  /> 
+        <property name="vendorGrade" column="VENDOR_GRADE" type="string"  /> 
+        <property name="phone" column="PHONE" type="string"  /> 
+        <property name="mobilePhone" column="MOBILE_PHONE" type="string"  /> 
+        <property name="email" column="EMAIL" type="string"  /> 
+        <property name="deliveryCycle" column="DELIVERY_CYCLE" type="string" />
+        <property name="deliveryStatus" column="DELIVERY_STATUS" type="string" />
+    </class>
 </hibernate-mapping>

@@ -3,13 +3,13 @@
  * Each line should be prefixed with  * 
  */
 
-package com.byd.datamgt15.model;
+package com.byd.datamgt15.pojo;
 
 /**
  *
  * @author ty
  */
-public class MaterialFullInfo {
+public class MaterialFullInfoView {
     /**
      * @see com.byd.datamgt15.domain.MaterialVendorInfo 's id
      */
@@ -21,7 +21,7 @@ public class MaterialFullInfo {
     String materialCode;
     String materialDesc;
     String materialDesc2;
-    byte[] image;
+//    byte[] image;
     String QMS;
     String vendorCode;
     String vendorName;
@@ -73,13 +73,13 @@ public class MaterialFullInfo {
         this.materialDesc2 = materialDesc2;
     }
 
-    public byte[] getImage() {
-        return image;
-    }
-
-    public void setImage(byte[] image) {
-        this.image = image;
-    }
+//    public byte[] getImage() {
+//        return image;
+//    }
+//
+//    public void setImage(byte[] image) {
+//        this.image = image;
+//    }
 
     public String getQMS() {
         return QMS;

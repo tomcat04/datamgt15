@@ -5,8 +5,10 @@
 package com.byd.datamgt15.dao;
 
 import com.byd.datamgt15.domain.Material;
+import com.byd.datamgt15.pojo.MaterialFullInfoView;
 import java.util.List;
 import org.hibernate.criterion.DetachedCriteria;
+import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
@@ -31,12 +33,11 @@ public class MaterialDaoImpl extends BaseDaoHibernateImpl<Material> implements I
         }
     }
 
-
     @Override
     public Material select(Material bean) {
-     if (bean.getId() != null) {
+        if (bean.getId() != null) {
             return dao.get(Material.class, bean.getId());
-        } else if (bean.getMaterialCode()!= null) {
+        } else if (bean.getMaterialCode() != null) {
             DetachedCriteria detachedCriteria = DetachedCriteria.forClass(Material.class);
             detachedCriteria.add(Restrictions.eq("materialCode", bean.getMaterialCode()));
             List findByCriteria = dao.findByCriteria(detachedCriteria);
@@ -47,7 +48,13 @@ public class MaterialDaoImpl extends BaseDaoHibernateImpl<Material> implements I
             }
         } else {
             throw new RuntimeException("参数不正确");
-        }   
+        }
+    }
+
+    @Override
+    public List<MaterialFullInfoView> selectViewListByPage(DetachedCriteria detachedCriteria, Integer startNum, Integer endNum) {
+        detachedCriteria.addOrder(Order.asc("recordId"));
+        return dao.findByCriteria(detachedCriteria, startNum, endNum - startNum + 1);
     }
 
 }

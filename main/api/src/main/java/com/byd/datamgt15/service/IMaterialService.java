@@ -5,7 +5,7 @@
 package com.byd.datamgt15.service;
 
 import com.byd.datamgt15.domain.MaterialDoc;
-import com.byd.datamgt15.model.MaterialFullInfo;
+import com.byd.datamgt15.pojo.MaterialFullInfoView;
 import java.util.List;
 import org.hibernate.criterion.DetachedCriteria;
 
@@ -23,7 +23,7 @@ public interface IMaterialService {
      * @param endNum
      * @return 
      */
-    public List<MaterialFullInfo> getMaterialFullInfos(DetachedCriteria detachedCriteria, Integer startNum, Integer endNum);
+    public List<MaterialFullInfoView> getMaterialFullInfos(DetachedCriteria detachedCriteria, Integer startNum, Integer endNum);
 
     /**
      * 查物料整数据(数量)
@@ -37,13 +37,13 @@ public interface IMaterialService {
      * 添加物料整数据
      * @param materialFullInfo 
      */
-    public void addMaterialFullInfo(MaterialFullInfo materialFullInfo);
+    public void addMaterialFullInfo(MaterialFullInfoView materialFullInfo);
     
     /**
      * 物料整数据的批量导入
      * @param materialFullInfos 
      */
-    public void importMaterialFullInfos(List<MaterialFullInfo> materialFullInfos);
+    public void importMaterialFullInfos(List<MaterialFullInfoView> materialFullInfos);
     
     /**
      * 根据物料号获得物料的各文档名称

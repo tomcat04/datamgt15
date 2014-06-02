@@ -1,3 +1,9 @@
 /*/nbproject/private*
 /*/dist/
 /*/build/
+/main/api/target/
+/main/util/target/
+/main/dao/target/
+/main/exception/target/
+/main/service/target/
+/main/WebApplication/target/

@@ -149,7 +149,7 @@ delivery_status int
 /**
 
 **/
-create  view MaterialFullInfo  as 
+create  view V_Material_Full_Info  as 
 select 
 relation.id,
 relation.recordId,

@@ -1,7 +1,0 @@
-[
-    {"text": "物料信息首页", "id": "MainPage", "iconCls": "manage", "leaf": true},
-    {"text": "最新物料异常", "id": "MaterialExceptionReport", "iconCls": "manage", "leaf": true},
-    {"text": "异常物料履历表", "id": "MaterialExceptionLog", "iconCls": "manage", "leaf": true},
-    {"text": "用户信息", "id": "User", "iconCls": "manage", "leaf": true},
-    {"text": "权限相关", "id": "Authority", "iconCls": "manage", "leaf": true}
-]

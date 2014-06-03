@@ -243,7 +243,18 @@ Ext.define("app.view.MaterialFullInfoAddWindow", {
             buttons: [{
                     text: 'Save',
                     handler: function() {
-                        this.up('form').getForm().isValid();
+//                        this.up('form').getForm().isValid();
+                        var materialFullInfoStore =   Ext.data.StoreManager.lookup("MaterialFullInfoStore");
+                        
+                        var record = {
+                            "materialCode":"111"
+                            
+                        }
+                        
+                        materialFullInfoStore.add(record);
+                        materialFullInfoStore.sync();
+                        materialFullInfoStore.load();
+                        
                     }
                 }, {
                     text: 'Cancel',

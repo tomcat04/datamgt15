@@ -38,4 +38,10 @@ public class MaterialFullInfoController {
         pageReturnBean.setDatas(list);
         return pageReturnBean;
     }
+
+    @RequestMapping(method = RequestMethod.POST)
+    public void post() {
+
+        System.out.println("post data");
+    }
 }
